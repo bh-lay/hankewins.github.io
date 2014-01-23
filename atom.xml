@@ -4,13 +4,55 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-23T16:04:24+08:00</updated>
+   <updated>2014-01-23T18:56:19+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
      <email>hankewins@gmail.com</email>
    </author>
 
+   
+   <entry>
+     <title>从 wordpress 搬迁到 github pages</title>
+     <link href="http://hankewins.com/2014/01/22/wordpress-blog-to-github-pages.html"/>
+     <updated>2014-01-22T00:00:00+08:00</updated>
+     <id>http://hankewins.com/2014/01/22/wordpress-blog-to-github-pages</id>
+     <content type="html">&lt;p&gt;一直在寻求快速发表文章的工具，于是不停的在尝试。期间尝试过win7和Ubuntu下各种Ｍarkdown编辑预览工具，
+甚至使用开发工具ST2(Sublime text 2)装Ｍarkdown插件来更新博客，各种尝试，各种折腾。也许是因为之前对动态站点的理解，
+导致思想上一直认为 —— WordPress 或者 emlog 等是最好的博客系统没有之一的原故。&lt;/p&gt;
+
+&lt;p&gt;自从使用&lt;a href=&quot;http://lab.lepture.com/nico/zh/&quot;&gt;nico&lt;/a&gt;生成了&lt;a href=&quot;http://vkdemo.sinaapp.com/icatjs/index.html&quot;&gt;ICAT&lt;/a&gt;文档后，
+有一种冲动想立刻在上面建立起我的博客副本，感觉挺不错的。&lt;/p&gt;
+
+&lt;p&gt;昨天打算在Ｗordpress的编辑器里写了一篇年会抽奖系统(nodejs+mongodb)的文章，由于涉及到很多的代码片段，有的需要格式化，有的只是要使用code标签。
+当我在编辑模式和HTML源码编辑模式下各种抓狂之后，决定放弃ＷordPress，使用github。这样我就可以在我喜欢的编辑器里，使用我熟悉的markdown语法来写博客。&lt;/p&gt;
+
+&lt;p&gt;迁移的步骤如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;先阅读阮一峰的一篇很赞的文章&lt;a href=&quot;http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html&quot;&gt;搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;备份wordpress数据库，并转换日志为.md文件&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载一份 jekyll 模板 (这里感谢&lt;a href=&quot;http://www.zhanxin.info/&quot;&gt;展新&lt;/a&gt;的模块&lt;a href=&quot;https://github.com/pizn/kunka&quot;&gt;kunka&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将第二步中的所有.md文件放到_posts文件夹中（手动处理好.md文件中非法的字符和标签）&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;模块 kunka 中支持两种评论插件（disqus 和多说），进行简单配置即可直接使用。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将本地文件提交到github&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;迁移的注意点如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;github pages 分为两大类，一类是以根站点（github user or organization site, e.g. username.github.io), 
+另一类是　项目站点（project site, e.g. username.github.io/projectname),请参考&lt;a href=&quot;http://pages.github.com&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;域名域名(顶级域名绑定——只需要把顶级域名的Ａ记录指向到204.232.175.78，
+非顶级域名绑定——只需要把非顶级域名绑定的cname的DNS解析指向到username.github.com（请将username换成你的用户名）)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;关于 jekyll 的相关操作，可以查看&lt;a href=&quot;http://jekyllrb.com/docs/home/&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对以上有任何的疑问都可以&lt;a href=&quot;http://hankewins.com/about.html&quot;&gt;联系我&lt;/a&gt;或者给我留言，谢谢！&lt;/p&gt;
+
+&lt;p&gt;最后，整个博客都是开源，博客中的样式、模板都可以直接使用，但文章内容和图片内容保留版权，未经允许禁止使用！&lt;/p&gt;
+</content>
+   </entry>
    
    <entry>
      <title>2013年终总结</title>
@@ -597,29 +639,6 @@ $ heroku open
 &lt;p&gt;今天是值得记忆的日子;&lt;/p&gt;
 
 &lt;p&gt;生日快乐！&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>用心感受生活，用视觉鞭笞思想</title>
-     <link href="http://hankewins.com/2013/09/07/feeling-in-your-heart.html"/>
-     <updated>2013-09-07T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/09/07/feeling-in-your-heart</id>
-     <content type="html">&lt;p&gt;最近有些迷茫，不知道自己做了些什么，一下子感觉心里很空虚，每天看的最多的是网易新闻，似乎奇葩事情已不是在那么的奇怪，只是没有关注或者没有报道出来而已。看的多了，想的也就多了，久违的周公近期在我的心灵小站活动频频，难道周公不去光顾那些“美少女”了吗?我惊叹呼！&lt;/p&gt;
-
-&lt;p&gt;以前大家都教我用心感受生活，总能有所收获。今天我不经意的要问：“不专注的心还能感受生活吗？”，迷茫的时刻，我发现自己不在专注，感觉很多东西要去多，这个弄弄那个弄弄，似乎还很忙的样子（其实什么都没有做成），连冷静思考的时间都没有似的。&lt;/p&gt;
-
-&lt;p&gt;今天又是大周六，头脑风暴（3分钟）自由演讲，为了给自己充足的时间时间去头脑风暴，我选择了最后一个演讲。从心里回顾一下近期的工作以及生活等等方面，我确定了主题“耳听为虚，眼见为实，用心感受生活，用视觉鞭笞思想”，用它来概括这次涉及到的话题“梦、健康、人生价值、无奈生活”。&lt;/p&gt;
-
-&lt;p&gt;冷静思考为了“梦、健康、人生价值、无奈生活”。&lt;/p&gt;
-
-&lt;p&gt;中国梦 － 个人梦&lt;/p&gt;
-
-&lt;p&gt;健康 － 奋斗&lt;/p&gt;
-
-&lt;p&gt;人生价值 － 努力&lt;/p&gt;
-
-&lt;p&gt;无奈生活 － 人生选择&lt;/p&gt;
 </content>
    </entry>
    

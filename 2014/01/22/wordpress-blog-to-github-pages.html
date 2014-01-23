@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>记忆人生，勿轻意忘记 - Hankewins Blog</title>
+    <title>从 wordpress 搬迁到 github pages - Hankewins Blog</title>
     <!-- meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Jekyll" />
@@ -108,61 +108,52 @@
         <div class="container fn-clear">
             <div class="main">
                 <div class="article article-post">
-    <h2 class="title">记忆人生，勿轻意忘记</h2>
+    <h2 class="title">从 wordpress 搬迁到 github pages</h2>
     <div class="info">
         <span class="info-title"><i class="icon-calendar"></i> Published: </span>
-        <span class="info-date">15 Sep 2013</span>
+        <span class="info-date">22 Jan 2014</span>
         <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
         <span class="info-link"><a href="http://hankewins.com/categories.html#-ref" ></a></span>
     </div>
-    <p>你的人生，你的日子，不要放弃，不要忘记！</p>
+    <p>一直在寻求快速发表文章的工具，于是不停的在尝试。期间尝试过win7和Ubuntu下各种Ｍarkdown编辑预览工具，
+甚至使用开发工具ST2(Sublime text 2)装Ｍarkdown插件来更新博客，各种尝试，各种折腾。也许是因为之前对动态站点的理解，
+导致思想上一直认为 —— WordPress 或者 emlog 等是最好的博客系统没有之一的原故。</p>
 
-<p>今年是一个特殊的年份;</p>
+<p>自从使用<a href="http://lab.lepture.com/nico/zh/">nico</a>生成了<a href="http://vkdemo.sinaapp.com/icatjs/index.html">ICAT</a>文档后，
+有一种冲动想立刻在上面建立起我的博客副本，感觉挺不错的。</p>
 
-<p>今月是一个值得记忆的月份;</p>
+<p>昨天打算在Ｗordpress的编辑器里写了一篇年会抽奖系统(nodejs+mongodb)的文章，由于涉及到很多的代码片段，有的需要格式化，有的只是要使用code标签。
+当我在编辑模式和HTML源码编辑模式下各种抓狂之后，决定放弃ＷordPress，使用github。这样我就可以在我喜欢的编辑器里，使用我熟悉的markdown语法来写博客。</p>
 
-<p>今日是一个难忘的日子;</p>
+<p>迁移的步骤如下：</p>
 
-<p>今时是一个激动的时刻;</p>
+<ul>
+<li><p>先阅读阮一峰的一篇很赞的文章<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门</a></p></li>
+<li><p>备份wordpress数据库，并转换日志为.md文件</p></li>
+<li><p>下载一份 jekyll 模板 (这里感谢<a href="http://www.zhanxin.info/">展新</a>的模块<a href="https://github.com/pizn/kunka">kunka</a>)</p></li>
+<li><p>将第二步中的所有.md文件放到_posts文件夹中（手动处理好.md文件中非法的字符和标签）</p></li>
+<li><p>模块 kunka 中支持两种评论插件（disqus 和多说），进行简单配置即可直接使用。</p></li>
+<li><p>将本地文件提交到github</p></li>
+</ul>
 
-<p>我的本命年我的生日！</p>
+<p>迁移的注意点如下：</p>
 
-<h3>人生的本命年</h3>
+<ul>
+<li><p>github pages 分为两大类，一类是以根站点（github user or organization site, e.g. username.github.io), 
+另一类是　项目站点（project site, e.g. username.github.io/projectname),请参考<a href="http://pages.github.com">官方文档</a></p></li>
+<li><p>域名域名(顶级域名绑定——只需要把顶级域名的Ａ记录指向到204.232.175.78，
+非顶级域名绑定——只需要把非顶级域名绑定的cname的DNS解析指向到username.github.com（请将username换成你的用户名）)</p></li>
+<li><p>关于 jekyll 的相关操作，可以查看<a href="http://jekyllrb.com/docs/home/">官方文档</a></p></li>
+</ul>
 
-<p>百度百科解释：十二年—遇的农历属相所在的年份，俗称属相年。在传统习俗中，本命年常常被认为是一个不吉利的年份。“本命年犯太岁，太岁当头坐，无喜必有祸”的民谣是关于本命年不甚吉利的最好写照。</p>
+<p>对以上有任何的疑问都可以<a href="http://hankewins.com/about.html">联系我</a>或者给我留言，谢谢！</p>
 
-<p>虽然在本命年的开始，我也失去了无法忘却的记忆，但是本命年的不利真的是天命吗？其实不然，个人认为都是自己处事的不严谨，造成了人生的插曲。呵呵，还是不要对这些进行评论啦！</p>
-
-<p>本命年无论是好还是坏，我们都不能忘记，因为人生中能有几个本命年呢。</p>
-
-<h3>特殊的九月</h3>
-
-<p>九月是一个秋高气爽的季节;</p>
-
-<p>九月是一个开始大声高歌a、o、e的季节 ——— 小学;</p>
-
-<p>九月是一个开始为理想奋斗的季节 ——— 初中、高中;</p>
-
-<p>九月是一个开始进入梦想殿堂的季节 ——— 大学;</p>
-
-<p>九月也是爸爸、姐姐和我出生的季节。</p>
-
-<h3>难忘的今天</h3>
-
-<p>今天是偷看十五的月亮圆不圆的日子;</p>
-
-<p>今天是一个月的中旬的日子;</p>
-
-<p>今天是值得记忆的日子;</p>
-
-<p>生日快乐！</p>
+<p>最后，整个博客都是开源，博客中的样式、模板都可以直接使用，但文章内容和图片内容保留版权，未经允许禁止使用！</p>
 
     <nav class="article-previous fn-clear">
         
-        <a class="prev" href="/2013/09/07/feeling-in-your-heart.html" rel="bookmark">&laquo;&nbsp;用心感受生活，用视觉鞭笞思想</a>
+        <a class="prev" href="/2013/12/28/2013-year.html" rel="bookmark">&laquo;&nbsp;2013年终总结</a>
         
-        
-        <a class="next" href="/2013/09/17/ubuntu-heroku-build-node-app.html" rel="bookmark">Ubuntu下通过Heroku部署Node.js应用程序&nbsp;&raquo;</a>
         
     </nav>
     <div class="comment">
