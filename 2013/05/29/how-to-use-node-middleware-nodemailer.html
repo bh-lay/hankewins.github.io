@@ -1,0 +1,92 @@
+<p>在实现Node.js开发指南中提到的<a href="https://github.com/hankewins/microblog">microblog</a>后，想加入邮件功能模块，通过各方的了解，最终选择了<a href="http://www.nodemailer.com/">nodemailer</a>。根据<a href="http://www.nodemailer.com/">nodemailer官网</a>的使用方法介绍，可以很轻松的实现邮件发送功能，可是当你根据自己的想法去使用nodemailer时会遇到一些问题，以下详细的介绍nodemailer的使用以及遇到的问题的一些思考。</p>
+
+<h3>安装nodemailer</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">npm install nodemailer
+</code></pre></div>
+<h3>引入nodemailer模块</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">var nodemailer = require(&#39;nodemailer&#39;);
+</code></pre></div>
+<h3>nodemailer实例</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">var nodemailer = require(&#39;nodemailer&#39;);
+var transport = nodemailer.createTransport(&#39;SMTP&#39;, {
+    service: &#39;qq&#39;, //use well known service
+    auth: {
+        user: &#39;hankewins@qq.com&#39;,
+        pass: &#39;123456&#39;
+    }
+});
+
+var data = {
+    form: &#39;Hankewins &lt;hankewins.vip@qq.com&#39;,
+    to: &#39;tomail@gmail.com,tomail2&lt;tomail2@gmail.com&gt;&#39;,
+    subject: &#39;Hello world&#39;,
+    text: &#39;Hello world, I am a test mail!&#39;,
+    html: &#39;&lt;b&gt;Hello world, I am a test mail!&lt;/b&gt;&#39;
+};
+
+transport.sendMail(data, function(err, res){
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(&#39;Message sent: &#39; + res.message);
+    }
+});
+</code></pre></div>
+<!--more-->
+
+<p>运行以上实例会产生以下几种情况：</p>
+
+<p>1.当user和pass正确时，采用Gmail SMTP方式邮件发送成功。（<strong>Gmail只验证用户是否通过认证，不做其他格式要求</strong>）</p>
+
+<p>2.当user和pass正确时，采用QQ SMTP方式邮件发送失败。（<strong>QQ邮件服务器验证用户是否通过认证、用户与收件人是否一致，同时格式须正确。</strong>）  </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">{ [SenderError: Mail from command failed - 501 mail from address must be same as
+    authorization user]
+    name: &#39;SenderError&#39;,
+    data: &#39;501 mail from address must be same as authorization user&#39; }
+</code></pre></div>
+<p>3.当user和pass正确时，采用126、163 SMTP方式邮件发送失败。（<strong>网易邮件服务器验证用户是否通过认证、用户与收件人是否一致，同时验证邮件格式是否正确</strong>）</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">{ [SenderError: Mail from command failed - 550 Invalid User c6b4f4d2-2f21-4de3-8
+985-68b589eab3d1]
+  name: &#39;SenderError&#39;,
+  data: &#39;550 Invalid User c6b4f4d2-2f21-4de3-8985-68b589eab3d1&#39; }
+当用户的邮件格式不正确，或者收件人错误时，返回提示信息都没有QQ邮件服务精确
+</code></pre></div>
+<p>为了明确的知道邮件发送过程，我通过windows DOS命令telnet smtp连接邮件服务器，测试邮件发送情况，同时找到了得出以上结论。</p>
+
+<h3>nodemailer的几点说明</h3>
+
+<ol>
+<li> 官网的实例大部分都是采用定义service: &quot;Gmail&quot; 的SMTP发送邮件。(基中service是指定义好的接口，包含提供SMTP服务的邮件服务商列表。文件路径为：node_modules/nodermailer/lib/wellknown.js)</li>
+</ol>
+
+<p>2.nodemailer-&gt;service默认国内的邮件服务商只提供QQ的配置，如果需要使用其他邮件服务商的SMTP可以打开wellknown.js文件进行修改。</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">文件路径：node_modules/nodermailer/lib/wellknown.js
+
+&quot;126&quot;:{
+    transport: &quot;SMTP&quot;,
+    host: &quot;smtp.126.com&quot;,
+    port:465,
+    secureConnection: true,
+    requiresAuth: true,
+    domains: [&quot;126.com&quot;]
+},
+&quot;163&quot;:{
+    transport: &quot;SMTP&quot;,
+    host: &quot;smtp.163.com&quot;,
+    port:465,
+    secureConnection: true,
+    requiresAuth: true,
+    domains: [&quot;163.com&quot;]
+}
+
+以上SMTP格式也可以在nodemailer.createTransport参数传递过程中指定。
+</code></pre></div>
+<h3>参考:</h3>
+
+<p>nodemailer官网 <a href="http://www.nodemailer.com/">http://www.nodemailer.com/</a><br>
+win7下开启telnet <a href="http://zhidao.baidu.com/question/316035780.html">http://zhidao.baidu.com/question/316035780.html</a><br>
+telnet smtp发送邮件 <a href="http://www.cnblogs.com/rootq/articles/1320266.html">http://www.cnblogs.com/rootq/articles/1320266.html</a></p>
+
+<p>欢迎加入交流群：322794303</p>
+
+<p>(本文出自<a href="http://blog.hankewins.com/node-middleware-nodemailer">hankewins</a>，转载时请注明出处)</p>
