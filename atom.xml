@@ -4,7 +4,7 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-23T12:46:34+08:00</updated>
+   <updated>2014-01-23T12:52:33+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
@@ -233,9 +233,7 @@ border:1px solid #F8F8F8;
      <link href="http://hankewins.com/2013/09/18/ubuntu-vim-install-markdown-plugin.html"/>
      <updated>2013-09-18T00:00:00+08:00</updated>
      <id>http://hankewins.com/2013/09/18/ubuntu-vim-install-markdown-plugin</id>
-     <content type="html">&lt;h2&gt;Ubuntu vim install markdown plugin&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt;出来也有很长时间了，网上也有很多关于&lt;a href=&quot;http://markdown.tw/&quot;&gt;Markdown的语法介绍&lt;/a&gt;以及使用说明，如果还不知道什么是Markdown,可以查看这篇&lt;a href=&quot;http://ux.etao.com/posts/620&quot;&gt;文章&lt;/a&gt;。写这篇文章的初衷只为了记录在Windows系统与Ubuntu系统下使用markdown的一些个人感受。&lt;/p&gt;
+     <content type="html">&lt;p&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt;出来也有很长时间了，网上也有很多关于&lt;a href=&quot;http://markdown.tw/&quot;&gt;Markdown的语法介绍&lt;/a&gt;以及使用说明，如果还不知道什么是Markdown,可以查看这篇&lt;a href=&quot;http://ux.etao.com/posts/620&quot;&gt;文章&lt;/a&gt;。写这篇文章的初衷只为了记录在Windows系统与Ubuntu系统下使用markdown的一些个人感受。&lt;/p&gt;
 
 &lt;h3&gt;Markdown in windows&lt;/h3&gt;
 
@@ -284,9 +282,7 @@ border:1px solid #F8F8F8;
      <link href="http://hankewins.com/2013/09/17/ubuntu-heroku-build-node-app.html"/>
      <updated>2013-09-17T00:00:00+08:00</updated>
      <id>http://hankewins.com/2013/09/17/ubuntu-heroku-build-node-app</id>
-     <content type="html">&lt;h2&gt;Ubuntu + Heroku + Git + Node&lt;/h2&gt;
-
-&lt;p&gt;自从写第一个Node &lt;a href=&quot;https://github.com/hankewins/microblog&quot;&gt;Microblog&lt;/a&gt; web应用到现在也很长时间了，虽然后面也写了几个Node小工具，但是一直都是基于本地环境。虽然之前也有尝试在&lt;a href=&quot;http://sae.sina.com.cn/&quot;&gt;SAE&lt;/a&gt;、&lt;a href=&quot;http://cnodejs.net/&quot;&gt;NAE&lt;/a&gt;(已停止维护)、&lt;a href=&quot;http://developer.baidu.com/bae&quot;&gt;BAE&lt;/a&gt;上部署Node应用程序，但由于种种原因，最终也只是一个尝试，没有成功部署，在此还是推荐几家PaaS平台：&lt;/p&gt;
+     <content type="html">&lt;p&gt;自从写第一个Node &lt;a href=&quot;https://github.com/hankewins/microblog&quot;&gt;Microblog&lt;/a&gt; web应用到现在也很长时间了，虽然后面也写了几个Node小工具，但是一直都是基于本地环境。虽然之前也有尝试在&lt;a href=&quot;http://sae.sina.com.cn/&quot;&gt;SAE&lt;/a&gt;、&lt;a href=&quot;http://cnodejs.net/&quot;&gt;NAE&lt;/a&gt;(已停止维护)、&lt;a href=&quot;http://developer.baidu.com/bae&quot;&gt;BAE&lt;/a&gt;上部署Node应用程序，但由于种种原因，最终也只是一个尝试，没有成功部署，在此还是推荐几家PaaS平台：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt;(信赖Git+Foreman)&lt;/li&gt;
