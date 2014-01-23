@@ -1,4 +1,113 @@
-<p>今天同事用ST2打开.scss项目文件时，出现自动生成并打开一个.dump文件，而且文件中的代码不再高度显示，分析如下：  </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ST2打开.scss文件时自动生成并打开.dump文件的BUG - Hankewins Blog</title>
+    <!-- meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="Hankewins" />
+    <meta name="description" content="Hankewins Blog" />
+    <meta name="keywords" content="" />
+    <!-- atom -->
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="http://hankewins.com/atom.xml" />
+    <link rel="shortcut icon" href="http://jekyllrb.com/favicon.png" type="image/x-icon" />
+    <!-- font-awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://hankewins.com/css/syntax.css">
+    <link rel="stylesheet" href="http://hankewins.com/css/main.css">
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-40169250-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+</head>
+<body>
+    <div class="head fn-clear">
+        <div class="header">
+            <h1 class="logo">
+                <a href="http://hankewins.com"><i class="icon-anchor"></i></a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="http://hankewins.com/index.html">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="http://hankewins.com/categories.html">
+                            分类目录
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="http://hankewins.com/archives.html">
+                            文章归档
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="http://hankewins.com/about.html">
+                            关于我
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="http://hankewins.com/links.html">
+                            友情链接
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+            </nav>
+            <div class="follow">
+                
+                <a href="/atom.xml" target="_blank"><i class="icon-rss"></i></a>
+                
+                <a href="http://weibo.com/hankewins" target="_blank"><i class="icon-weibo"></i></a>
+                
+                <a href="http://renren.com" target="_blank"><i class="icon-renren"></i></a>
+                
+                <a href="http://github.com/hankewins" target="_blank"><i class="icon-github-alt"></i></a>
+                
+                <a href="http://twitter.com/hankewins" target="_blank"><i class="icon-twitter"></i></a>
+                
+                <a href="http://google.com" target="_blank"><i class="icon-google-plus"></i></a>
+                
+            </div>
+        </div>
+    </div>
+    <div class="contain fn-clear">
+        <div class="container fn-clear">
+            <div class="main">
+                <p>今天同事用ST2打开.scss项目文件时，出现自动生成并打开一个.dump文件，而且文件中的代码不再高度显示，分析如下：  </p>
 
 <ul>
 <li><p>1..dump是什么文件？（系统内存中存储的临时文件）。  </p></li>
@@ -20,3 +129,66 @@
 <p>下载地址：<a href="http://pan.baidu.com/share/link?shareid=174741&amp;uk=2534294120">http://pan.baidu.com/share/link?shareid=174741&amp;uk=2534294120</a>  </p>
 
 <p>使用方法：下载 GBK Encoding Support.sublime-package 文件 替换 SublimeText2\Pristine Packages  下的GBK Encoding Support.sublime-package 文件，重启ST2就可以了。</p>
+
+            </div>
+            <div class="aside">
+                <div class="aside-contact">
+                    <h4 class="title">About me</h4>
+                    <div class="det fn-clear">
+                        <div class="det-image">
+                            <img src="https://2.gravatar.com/avatar/aa1d198825148763d77cc8de072fee63" />
+                        </div>
+                        <div class="det-text">
+                            <p>我是「Hankewins」</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aside-item">
+                    <h4 class="title">Recent Posts</h4>
+                    <ul class="list">
+                        
+                            <li><a href="http://hankewins.com/2013/10/17/web-rebuild-party.html" title="蜕变·WebRebuild 2013 前端年度交流盛会邀请" rel="bookmark">蜕变·WebRebuild 2013 前端年度交流盛会邀请</a></li>
+                        
+                            <li><a href="http://hankewins.com/2013/10/14/summary-of-mobile-frontend-development.html" title="移动平台前端开发总结" rel="bookmark">移动平台前端开发总结</a></li>
+                        
+                            <li><a href="http://hankewins.com/2013/10/07/work-in-gionee-for-one-year.html" title="总结在金立工作的一年" rel="bookmark">总结在金立工作的一年</a></li>
+                        
+                            <li><a href="http://hankewins.com/2013/10/07/happy-national-day.html" title="精彩国庆，娱乐人生" rel="bookmark">精彩国庆，娱乐人生</a></li>
+                        
+                            <li><a href="http://hankewins.com/2013/09/18/ubuntu-vim-install-markdown-plugin.html" title="Ubuntu下vim安装markdown插件" rel="bookmark">Ubuntu下vim安装markdown插件</a></li>
+                        
+                            <li><a href="http://hankewins.com/2013/09/17/ubuntu-heroku-build-node-app.html" title="Ubuntu下通过Heroku部署Node.js应用程序" rel="bookmark">Ubuntu下通过Heroku部署Node.js应用程序</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="aside-item">
+                    <h4 class="title">Links</h4>
+                    <ul class="list">
+                        
+                            
+                                
+                                <li><a href="http://www.hankewins.com" title="hankewins" target="_blank">hankewins</a></li>
+                                
+                                <li><a href="http://jekyllrb.com" title="Jekyll" target="_blank">Jekyll</a></li>
+                                
+                            
+                        
+                            
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="footer">
+            <p>Copyright 2010 - <script>document.write((new Date).getFullYear());</script>. All rights reserved. Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin.info</a>.</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+</body>
+</html>
