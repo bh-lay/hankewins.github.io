@@ -4,7 +4,7 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-23T19:54:13+08:00</updated>
+   <updated>2014-01-23T20:00:07+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
@@ -44,7 +44,7 @@
 &lt;li&gt;&lt;p&gt;github pages 分为两大类，一类是以根站点（github user or organization site, e.g. username.github.io), 
 另一类是　项目站点（project site, e.g. username.github.io/projectname),请参考&lt;a href=&quot;http://pages.github.com&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;域名域名(顶级域名绑定——只需要把顶级域名的Ａ记录指向到204.232.175.78，
-非顶级域名绑定——只需要把非顶级域名绑定的cname的DNS解析指向到username.github.com（请将username换成你的用户名）)&lt;/p&gt;&lt;/li&gt;
+非顶级域名绑定——只需要把非顶级域名绑定的cname的DNS解析指向到username.github.com（请将username换成你的用户名）)，查看&lt;a href=&quot;https://help.github.com/articles/setting-up-a-custom-domain-with-pages&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;关于 jekyll 的相关操作，可以查看&lt;a href=&quot;http://jekyllrb.com/docs/home/&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
