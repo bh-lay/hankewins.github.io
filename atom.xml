@@ -4,7 +4,7 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-23T11:14:09+08:00</updated>
+   <updated>2014-01-23T11:29:33+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
@@ -473,14 +473,12 @@ $ heroku open
      <link href="http://hankewins.com/2013/09/06/media-your-device-by-javascript.html"/>
      <updated>2013-09-06T00:00:00+08:00</updated>
      <id>http://hankewins.com/2013/09/06/media-your-device-by-javascript</id>
-     <content type="html">&lt;pre&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-function is_mobile(){
+     <content type="html">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;function is_mobile(){
     var ua = navigator.userAgent, isMobile = false;
-    var ma = [&quot;240x320&quot;,&quot;acer&quot;,&quot;acoon&quot;,&quot;acs-&quot;,&quot;abacho&quot;,&quot;ahong&quot;,&quot;airness&quot;,&quot;alcatel&quot;,&quot;amoi&quot;,&quot;android&quot;,&quot;anywhereyougo.com&quot;,&quot;applewebkit/525&quot;,&quot;applewebkit/532&quot;,&quot;asus&quot;,&quot;audio&quot;,&quot;au-mic&quot;,&quot;avantogo&quot;,&quot;becker&quot;,&quot;benq&quot;,&quot;bilbo&quot;,&quot;bird&quot;,&quot;blackberry&quot;,&quot;blazer&quot;,&quot;bleu&quot;,&quot;cdm-&quot;,&quot;compal&quot;,&quot;coolpad&quot;,&quot;danger&quot;,&quot;dbtel&quot;,&quot;dopod&quot;,&quot;elaine&quot;,&quot;eric&quot;,&quot;etouch&quot;,&quot;fly &quot;,&quot;fly_&quot;,&quot;fly-&quot;,&quot;go.web&quot;,&quot;goodaccess&quot;,&quot;gradiente&quot;,&quot;grundig&quot;,&quot;haier&quot;,&quot;hedy&quot;,&quot;hitachi&quot;,&quot;htc&quot;,&quot;huawei&quot;,&quot;hutchison&quot;,&quot;inno&quot;,&quot;ipad&quot;,&quot;ipaq&quot;,&quot;ipod&quot;,&quot;jbrowser&quot;,&quot;kddi&quot;,&quot;kgt&quot;,&quot;kwc&quot;,&quot;lenovo&quot;,&quot;lg &quot;,&quot;lg2&quot;,&quot;lg3&quot;,&quot;lg4&quot;,&quot;lg5&quot;,&quot;lg7&quot;,&quot;lg8&quot;,&quot;lg9&quot;,&quot;lg-&quot;,&quot;lge-&quot;,&quot;lge9&quot;,&quot;longcos&quot;,&quot;maemo&quot;,&quot;mercator&quot;,&quot;meridian&quot;,&quot;micromax&quot;,&quot;midp&quot;,&quot;mini&quot;,&quot;mitsu&quot;,&quot;mmm&quot;,&quot;mmp&quot;,&quot;mobi&quot;,&quot;mot-&quot;,&quot;moto&quot;,&quot;nec-&quot;,&quot;netfront&quot;,&quot;newgen&quot;,&quot;nexian&quot;,&quot;nf-browser&quot;,&quot;nintendo&quot;,&quot;nitro&quot;,&quot;nokia&quot;,&quot;nook&quot;,&quot;novarra&quot;,&quot;obigo&quot;,&quot;palm&quot;,&quot;panasonic&quot;,&quot;pantech&quot;,&quot;philips&quot;,&quot;phone&quot;,&quot;pg-&quot;,&quot;playstation&quot;,&quot;pocket&quot;,&quot;pt-&quot;,&quot;qc-&quot;,&quot;qtek&quot;,&quot;rover&quot;,&quot;sagem&quot;,&quot;sama&quot;,&quot;samu&quot;,&quot;sanyo&quot;,&quot;samsung&quot;,&quot;sch-&quot;,&quot;scooter&quot;,&quot;sec-&quot;,&quot;sendo&quot;,&quot;sgh-&quot;,&quot;sharp&quot;,&quot;siemens&quot;,&quot;sie-&quot;,&quot;softbank&quot;,&quot;sony&quot;,&quot;spice&quot;,&quot;sprint&quot;,&quot;spv&quot;,&quot;symbian&quot;,&quot;tablet&quot;,&quot;talkabout&quot;,&quot;tcl-&quot;,&quot;teleca&quot;,&quot;telit&quot;,&quot;tianyu&quot;,&quot;tim-&quot;,&quot;toshiba&quot;,&quot;tsm&quot;,&quot;up.browser&quot;,&quot;utec&quot;,&quot;utstar&quot;,&quot;verykool&quot;,&quot;virgin&quot;,&quot;vk-&quot;,&quot;voda&quot;,&quot;voxtel&quot;,&quot;vx&quot;,&quot;wap&quot;,&quot;wellco&quot;,&quot;wig browser&quot;,&quot;wii&quot;,&quot;windows ce&quot;,&quot;wireless&quot;,&quot;xda&quot;,&quot;xde&quot;,&quot;zte&quot;,&quot;GiONEE&quot;,&quot;GiONEE-&quot;];
+    var ma = [&amp;quot;240x320&amp;quot;,&amp;quot;acer&amp;quot;,&amp;quot;acoon&amp;quot;,&amp;quot;acs-&amp;quot;,&amp;quot;abacho&amp;quot;,&amp;quot;ahong&amp;quot;,&amp;quot;airness&amp;quot;,&amp;quot;alcatel&amp;quot;,&amp;quot;amoi&amp;quot;,&amp;quot;android&amp;quot;,&amp;quot;anywhereyougo.com&amp;quot;,&amp;quot;applewebkit/525&amp;quot;,&amp;quot;applewebkit/532&amp;quot;,&amp;quot;asus&amp;quot;,&amp;quot;audio&amp;quot;,&amp;quot;au-mic&amp;quot;,&amp;quot;avantogo&amp;quot;,&amp;quot;becker&amp;quot;,&amp;quot;benq&amp;quot;,&amp;quot;bilbo&amp;quot;,&amp;quot;bird&amp;quot;,&amp;quot;blackberry&amp;quot;,&amp;quot;blazer&amp;quot;,&amp;quot;bleu&amp;quot;,&amp;quot;cdm-&amp;quot;,&amp;quot;compal&amp;quot;,&amp;quot;coolpad&amp;quot;,&amp;quot;danger&amp;quot;,&amp;quot;dbtel&amp;quot;,&amp;quot;dopod&amp;quot;,&amp;quot;elaine&amp;quot;,&amp;quot;eric&amp;quot;,&amp;quot;etouch&amp;quot;,&amp;quot;fly &amp;quot;,&amp;quot;fly_&amp;quot;,&amp;quot;fly-&amp;quot;,&amp;quot;go.web&amp;quot;,&amp;quot;goodaccess&amp;quot;,&amp;quot;gradiente&amp;quot;,&amp;quot;grundig&amp;quot;,&amp;quot;haier&amp;quot;,&amp;quot;hedy&amp;quot;,&amp;quot;hitachi&amp;quot;,&amp;quot;htc&amp;quot;,&amp;quot;huawei&amp;quot;,&amp;quot;hutchison&amp;quot;,&amp;quot;inno&amp;quot;,&amp;quot;ipad&amp;quot;,&amp;quot;ipaq&amp;quot;,&amp;quot;ipod&amp;quot;,&amp;quot;jbrowser&amp;quot;,&amp;quot;kddi&amp;quot;,&amp;quot;kgt&amp;quot;,&amp;quot;kwc&amp;quot;,&amp;quot;lenovo&amp;quot;,&amp;quot;lg &amp;quot;,&amp;quot;lg2&amp;quot;,&amp;quot;lg3&amp;quot;,&amp;quot;lg4&amp;quot;,&amp;quot;lg5&amp;quot;,&amp;quot;lg7&amp;quot;,&amp;quot;lg8&amp;quot;,&amp;quot;lg9&amp;quot;,&amp;quot;lg-&amp;quot;,&amp;quot;lge-&amp;quot;,&amp;quot;lge9&amp;quot;,&amp;quot;longcos&amp;quot;,&amp;quot;maemo&amp;quot;,&amp;quot;mercator&amp;quot;,&amp;quot;meridian&amp;quot;,&amp;quot;micromax&amp;quot;,&amp;quot;midp&amp;quot;,&amp;quot;mini&amp;quot;,&amp;quot;mitsu&amp;quot;,&amp;quot;mmm&amp;quot;,&amp;quot;mmp&amp;quot;,&amp;quot;mobi&amp;quot;,&amp;quot;mot-&amp;quot;,&amp;quot;moto&amp;quot;,&amp;quot;nec-&amp;quot;,&amp;quot;netfront&amp;quot;,&amp;quot;newgen&amp;quot;,&amp;quot;nexian&amp;quot;,&amp;quot;nf-browser&amp;quot;,&amp;quot;nintendo&amp;quot;,&amp;quot;nitro&amp;quot;,&amp;quot;nokia&amp;quot;,&amp;quot;nook&amp;quot;,&amp;quot;novarra&amp;quot;,&amp;quot;obigo&amp;quot;,&amp;quot;palm&amp;quot;,&amp;quot;panasonic&amp;quot;,&amp;quot;pantech&amp;quot;,&amp;quot;philips&amp;quot;,&amp;quot;phone&amp;quot;,&amp;quot;pg-&amp;quot;,&amp;quot;playstation&amp;quot;,&amp;quot;pocket&amp;quot;,&amp;quot;pt-&amp;quot;,&amp;quot;qc-&amp;quot;,&amp;quot;qtek&amp;quot;,&amp;quot;rover&amp;quot;,&amp;quot;sagem&amp;quot;,&amp;quot;sama&amp;quot;,&amp;quot;samu&amp;quot;,&amp;quot;sanyo&amp;quot;,&amp;quot;samsung&amp;quot;,&amp;quot;sch-&amp;quot;,&amp;quot;scooter&amp;quot;,&amp;quot;sec-&amp;quot;,&amp;quot;sendo&amp;quot;,&amp;quot;sgh-&amp;quot;,&amp;quot;sharp&amp;quot;,&amp;quot;siemens&amp;quot;,&amp;quot;sie-&amp;quot;,&amp;quot;softbank&amp;quot;,&amp;quot;sony&amp;quot;,&amp;quot;spice&amp;quot;,&amp;quot;sprint&amp;quot;,&amp;quot;spv&amp;quot;,&amp;quot;symbian&amp;quot;,&amp;quot;tablet&amp;quot;,&amp;quot;talkabout&amp;quot;,&amp;quot;tcl-&amp;quot;,&amp;quot;teleca&amp;quot;,&amp;quot;telit&amp;quot;,&amp;quot;tianyu&amp;quot;,&amp;quot;tim-&amp;quot;,&amp;quot;toshiba&amp;quot;,&amp;quot;tsm&amp;quot;,&amp;quot;up.browser&amp;quot;,&amp;quot;utec&amp;quot;,&amp;quot;utstar&amp;quot;,&amp;quot;verykool&amp;quot;,&amp;quot;virgin&amp;quot;,&amp;quot;vk-&amp;quot;,&amp;quot;voda&amp;quot;,&amp;quot;voxtel&amp;quot;,&amp;quot;vx&amp;quot;,&amp;quot;wap&amp;quot;,&amp;quot;wellco&amp;quot;,&amp;quot;wig browser&amp;quot;,&amp;quot;wii&amp;quot;,&amp;quot;windows ce&amp;quot;,&amp;quot;wireless&amp;quot;,&amp;quot;xda&amp;quot;,&amp;quot;xde&amp;quot;,&amp;quot;zte&amp;quot;,&amp;quot;GiONEE&amp;quot;,&amp;quot;GiONEE-&amp;quot;];
 
-    for (var i = 0, lens = ma.length; i &lt; lens; i++) {
-        if (ua.indexOf(ma[i]) &gt; -1) {
+    for (var i = 0, lens = ma.length; i &amp;lt; lens; i++) {
+        if (ua.indexOf(ma[i]) &amp;gt; -1) {
             isMobile = true;
             break;
         }
@@ -490,17 +488,15 @@ function is_mobile(){
 }
 
 if(is_mobile() === true){
-    document.write(navigator.userAgent + '&lt;br&gt;');
-    document.write('mobile access!');
-    //location.href = &quot;http://blog.hankewins.com/&quot;
+    document.write(navigator.userAgent + &amp;#39;&amp;lt;br&amp;gt;&amp;#39;);
+    document.write(&amp;#39;mobile access!&amp;#39;);
+    //location.href = &amp;quot;http://blog.hankewins.com/&amp;quot;
 
 } else {
-    document.write(navigator.userAgent + '&lt;br&gt;');
-    //document.write('pc access!'); 
+    document.write(navigator.userAgent + &amp;#39;&amp;lt;br&amp;gt;&amp;#39;);
+    //document.write(&amp;#39;pc access!&amp;#39;); 
 }
-&lt;/script&gt;
-&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;参考：http://levi.cg.am/?p=2214&lt;/p&gt;
 </content>
    </entry>
