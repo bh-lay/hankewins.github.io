@@ -4,13 +4,56 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-23T13:04:00+08:00</updated>
+   <updated>2014-01-23T13:06:29+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
      <email>hankewins@gmail.com</email>
    </author>
 
+   
+   <entry>
+     <title>2013年终总结</title>
+     <link href="http://hankewins.com/2013/12/28/2013-year.html"/>
+     <updated>2013-12-28T00:00:00+08:00</updated>
+     <id>http://hankewins.com/2013/12/28/2013-year</id>
+     <content type="html">&lt;p&gt;2013年就要过去了，像往年一样总结一下过去的一年我的变化。&lt;/p&gt;
+
+&lt;h1&gt;生活&lt;/h1&gt;
+
+&lt;p&gt;2013年，我的本命年，生活和感情在我的人生中也开了一个小玩笑，让我心情低落过、脾气暴躁过、在游戏中颓废过，但我的认知从未游离过，我了解我自己，不快乐的都已经过去了，重新认识自己，做好自己，为了明天，为了自己。&lt;/p&gt;
+
+&lt;p&gt;美好的瞬间，从现在开始， Let&amp;#39;s go!&lt;/p&gt;
+
+&lt;p&gt;在深圳第一次陪我家的“执子闲人”过了三个生日，送去了一份生日礼物 —— ipad 4&lt;/p&gt;
+
+&lt;p&gt;在深圳第一次和“执子闲人”去东部华侨城——二日游，也许去的人太多，没有想像中的那么好玩，但华侨城的景色和设计的确不错。&lt;/p&gt;
+
+&lt;p&gt;在深圳第一次和“执子闲人”订了一个KTV，傻傻的吃喝玩唱3小时。&lt;/p&gt;
+
+&lt;p&gt;在深圳第一次和“执子闲人”一起陪着侄女和外甥女简单的了解深圳。&lt;/p&gt;
+
+&lt;p&gt;今年夏天再次去清远二日游（ZTE 第一次、GiONEE移动互联网 第二次、GiONEE移动互联网战略第三次），但是和以往的心情却不一样，“清远鸡”味道着实不错，但我再也不打算去了，如果你下次去，记得帮忙带两只咯。&lt;/p&gt;
+
+&lt;p&gt;仔细想想今年去的地方也是挺多的，拿着单反、骑着山地车、望着大海，大声说“Hong Kong am here&amp;quot;!&lt;/p&gt;
+
+&lt;h1&gt;工作&lt;/h1&gt;
+
+&lt;p&gt;年初的规划，一个一个的顺利完成。（深入了解了组内JS框架的架构和设计原理以及使用场景等，率先在组内切换工作环境到Linux，创建了基于Compass的LookitUI（基于前端的UI库），深入的了解并使用backbone进行开发。）&lt;/p&gt;
+
+&lt;p&gt;在产品线成功的担任XX项目Master，离自己的职业规划又迈近了一小步！&lt;/p&gt;
+
+&lt;p&gt;今年我做了大小十几次的演讲，参加了每一期的头脑风暴以及技术分享会。其实演讲也是一种需要大量练习才能买得的技能，我现在也只是做到了最基础：弄清楚目标听众是什么，吸引他们的注意，表达我的想法。最近也有去看了很多大牛的演讲和分享，我自愧太不如了，以后还得多加练习，积极主动。&lt;/p&gt;
+
+&lt;p&gt;今年我成功的创建了Nodejs交流群（QQ群号：322794303），欢迎你的加入。成功的用Nodejs开发打包工具、CMS后台、年会抽奖系统。&lt;/p&gt;
+
+&lt;p&gt;技术学习方面，粗而广的学了一些东西， Nodejs、MongoDB、Liunx、Andorid、Backbonejs、Seajs、Rangularjs、响应式流程等。我学技术的原则是熟练度可以不高，但原理和模式一定要理解。&lt;/p&gt;
+
+&lt;p&gt;读书方面，粗略的看了这几本书， Nodejs 、MongoDB、JavascripMVC、淘宝技术这十年等，但对技术文章的阅读上有了很大的提高，同时对提高自身修养方面的关注度也近一步提高了。&lt;/p&gt;
+
+&lt;p&gt;最后的最后，跟我们家的“执子闲人”恋爱四年了，回想过去我们也遇到过很多的艰难，最终都挺过来了，感谢在我最困惑的时候，有你的陪伴。我相信，以后无论发生什么，我们都能一路走下去。&lt;/p&gt;
+</content>
+   </entry>
    
    <entry>
      <title>阿里前端的困局与突围(转)</title>
@@ -577,39 +620,6 @@ $ heroku open
 &lt;p&gt;人生价值 － 努力&lt;/p&gt;
 
 &lt;p&gt;无奈生活 － 人生选择&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>JS判断客户端是否为手机移动设备</title>
-     <link href="http://hankewins.com/2013/09/06/media-your-device-by-javascript.html"/>
-     <updated>2013-09-06T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/09/06/media-your-device-by-javascript</id>
-     <content type="html">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;function is_mobile(){
-    var ua = navigator.userAgent, isMobile = false;
-    var ma = [&amp;quot;240x320&amp;quot;,&amp;quot;acer&amp;quot;,&amp;quot;acoon&amp;quot;,&amp;quot;acs-&amp;quot;,&amp;quot;abacho&amp;quot;,&amp;quot;ahong&amp;quot;,&amp;quot;airness&amp;quot;,&amp;quot;alcatel&amp;quot;,&amp;quot;amoi&amp;quot;,&amp;quot;android&amp;quot;,&amp;quot;anywhereyougo.com&amp;quot;,&amp;quot;applewebkit/525&amp;quot;,&amp;quot;applewebkit/532&amp;quot;,&amp;quot;asus&amp;quot;,&amp;quot;audio&amp;quot;,&amp;quot;au-mic&amp;quot;,&amp;quot;avantogo&amp;quot;,&amp;quot;becker&amp;quot;,&amp;quot;benq&amp;quot;,&amp;quot;bilbo&amp;quot;,&amp;quot;bird&amp;quot;,&amp;quot;blackberry&amp;quot;,&amp;quot;blazer&amp;quot;,&amp;quot;bleu&amp;quot;,&amp;quot;cdm-&amp;quot;,&amp;quot;compal&amp;quot;,&amp;quot;coolpad&amp;quot;,&amp;quot;danger&amp;quot;,&amp;quot;dbtel&amp;quot;,&amp;quot;dopod&amp;quot;,&amp;quot;elaine&amp;quot;,&amp;quot;eric&amp;quot;,&amp;quot;etouch&amp;quot;,&amp;quot;fly &amp;quot;,&amp;quot;fly_&amp;quot;,&amp;quot;fly-&amp;quot;,&amp;quot;go.web&amp;quot;,&amp;quot;goodaccess&amp;quot;,&amp;quot;gradiente&amp;quot;,&amp;quot;grundig&amp;quot;,&amp;quot;haier&amp;quot;,&amp;quot;hedy&amp;quot;,&amp;quot;hitachi&amp;quot;,&amp;quot;htc&amp;quot;,&amp;quot;huawei&amp;quot;,&amp;quot;hutchison&amp;quot;,&amp;quot;inno&amp;quot;,&amp;quot;ipad&amp;quot;,&amp;quot;ipaq&amp;quot;,&amp;quot;ipod&amp;quot;,&amp;quot;jbrowser&amp;quot;,&amp;quot;kddi&amp;quot;,&amp;quot;kgt&amp;quot;,&amp;quot;kwc&amp;quot;,&amp;quot;lenovo&amp;quot;,&amp;quot;lg &amp;quot;,&amp;quot;lg2&amp;quot;,&amp;quot;lg3&amp;quot;,&amp;quot;lg4&amp;quot;,&amp;quot;lg5&amp;quot;,&amp;quot;lg7&amp;quot;,&amp;quot;lg8&amp;quot;,&amp;quot;lg9&amp;quot;,&amp;quot;lg-&amp;quot;,&amp;quot;lge-&amp;quot;,&amp;quot;lge9&amp;quot;,&amp;quot;longcos&amp;quot;,&amp;quot;maemo&amp;quot;,&amp;quot;mercator&amp;quot;,&amp;quot;meridian&amp;quot;,&amp;quot;micromax&amp;quot;,&amp;quot;midp&amp;quot;,&amp;quot;mini&amp;quot;,&amp;quot;mitsu&amp;quot;,&amp;quot;mmm&amp;quot;,&amp;quot;mmp&amp;quot;,&amp;quot;mobi&amp;quot;,&amp;quot;mot-&amp;quot;,&amp;quot;moto&amp;quot;,&amp;quot;nec-&amp;quot;,&amp;quot;netfront&amp;quot;,&amp;quot;newgen&amp;quot;,&amp;quot;nexian&amp;quot;,&amp;quot;nf-browser&amp;quot;,&amp;quot;nintendo&amp;quot;,&amp;quot;nitro&amp;quot;,&amp;quot;nokia&amp;quot;,&amp;quot;nook&amp;quot;,&amp;quot;novarra&amp;quot;,&amp;quot;obigo&amp;quot;,&amp;quot;palm&amp;quot;,&amp;quot;panasonic&amp;quot;,&amp;quot;pantech&amp;quot;,&amp;quot;philips&amp;quot;,&amp;quot;phone&amp;quot;,&amp;quot;pg-&amp;quot;,&amp;quot;playstation&amp;quot;,&amp;quot;pocket&amp;quot;,&amp;quot;pt-&amp;quot;,&amp;quot;qc-&amp;quot;,&amp;quot;qtek&amp;quot;,&amp;quot;rover&amp;quot;,&amp;quot;sagem&amp;quot;,&amp;quot;sama&amp;quot;,&amp;quot;samu&amp;quot;,&amp;quot;sanyo&amp;quot;,&amp;quot;samsung&amp;quot;,&amp;quot;sch-&amp;quot;,&amp;quot;scooter&amp;quot;,&amp;quot;sec-&amp;quot;,&amp;quot;sendo&amp;quot;,&amp;quot;sgh-&amp;quot;,&amp;quot;sharp&amp;quot;,&amp;quot;siemens&amp;quot;,&amp;quot;sie-&amp;quot;,&amp;quot;softbank&amp;quot;,&amp;quot;sony&amp;quot;,&amp;quot;spice&amp;quot;,&amp;quot;sprint&amp;quot;,&amp;quot;spv&amp;quot;,&amp;quot;symbian&amp;quot;,&amp;quot;tablet&amp;quot;,&amp;quot;talkabout&amp;quot;,&amp;quot;tcl-&amp;quot;,&amp;quot;teleca&amp;quot;,&amp;quot;telit&amp;quot;,&amp;quot;tianyu&amp;quot;,&amp;quot;tim-&amp;quot;,&amp;quot;toshiba&amp;quot;,&amp;quot;tsm&amp;quot;,&amp;quot;up.browser&amp;quot;,&amp;quot;utec&amp;quot;,&amp;quot;utstar&amp;quot;,&amp;quot;verykool&amp;quot;,&amp;quot;virgin&amp;quot;,&amp;quot;vk-&amp;quot;,&amp;quot;voda&amp;quot;,&amp;quot;voxtel&amp;quot;,&amp;quot;vx&amp;quot;,&amp;quot;wap&amp;quot;,&amp;quot;wellco&amp;quot;,&amp;quot;wig browser&amp;quot;,&amp;quot;wii&amp;quot;,&amp;quot;windows ce&amp;quot;,&amp;quot;wireless&amp;quot;,&amp;quot;xda&amp;quot;,&amp;quot;xde&amp;quot;,&amp;quot;zte&amp;quot;,&amp;quot;GiONEE&amp;quot;,&amp;quot;GiONEE-&amp;quot;];
-
-    for (var i = 0, lens = ma.length; i &amp;lt; lens; i++) {
-        if (ua.indexOf(ma[i]) &amp;gt; -1) {
-            isMobile = true;
-            break;
-        }
-    }
-
-    return isMobile;
-}
-
-if(is_mobile() === true){
-    document.write(navigator.userAgent + &amp;#39;&amp;lt;br&amp;gt;&amp;#39;);
-    document.write(&amp;#39;mobile access!&amp;#39;);
-    //location.href = &amp;quot;http://blog.hankewins.com/&amp;quot;
-
-} else {
-    document.write(navigator.userAgent + &amp;#39;&amp;lt;br&amp;gt;&amp;#39;);
-    //document.write(&amp;#39;pc access!&amp;#39;); 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;参考：http://levi.cg.am/?p=2214&lt;/p&gt;
 </content>
    </entry>
    
