@@ -4,7 +4,7 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-23T20:00:07+08:00</updated>
+   <updated>2014-01-24T11:33:31+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
@@ -462,9 +462,9 @@ border:1px solid #F8F8F8;
 
 &lt;p&gt;在这里我也不需要重复造轮子，可以查看以下链接：&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://calefy.org/2012/03/01/set-vim-markdown-syntax-highlight.html&quot;&gt;http://calefy.org/2012/03/01/set-vim-markdown-syntax-highlight.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://calefy.org/2012/03/01/set-vim-markdown-syntax-highlight.html&quot;&gt;在vim中设置markdown语法高亮&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://blog.pkufranky.com/2011/11/%E4%BD%BF%E7%94%A8vim%E5%92%8Cmarkdown%E6%92%B0%E5%86%99blog%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0wordpress/&quot;&gt;http://blog.pkufranky.com/2011/11/%E4%BD%BF%E7%94%A8vim%E5%92%8Cmarkdown%E6%92%B0%E5%86%99blog%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0wordpress/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.pkufranky.com/2011/11/%E4%BD%BF%E7%94%A8vim%E5%92%8Cmarkdown%E6%92%B0%E5%86%99blog%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0wordpress/&quot;&gt;使用vim和markdown撰写blog并发布到wordpress&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;注意：操作完成后，重新打开vim。&lt;/p&gt;
 
