@@ -4,7 +4,7 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-25T12:48:10+08:00</updated>
+   <updated>2014-01-25T17:58:54+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
@@ -116,6 +116,66 @@
 &lt;p&gt;对以上有任何的疑问都可以&lt;a href=&quot;http://hankewins.com/about.html&quot;&gt;联系我&lt;/a&gt;或者给我留言，谢谢！&lt;/p&gt;
 
 &lt;p&gt;最后，整个博客都是开源，博客中的样式、模板都可以直接使用，但文章内容和图片内容保留版权，未经允许禁止使用！&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>金立移动互联网第三产品中心年度盛会</title>
+     <link href="http://hankewins.com/2014/01/18/third-product-center-annual-party.html"/>
+     <updated>2014-01-18T00:00:00+08:00</updated>
+     <id>http://hankewins.com/2014/01/18/third-product-center-annual-party</id>
+     <content type="html">&lt;p&gt;从移动互联网运营部到移动互联网第三产品中心的转变，标志着我们目前各产品线的良性成长。从个位数迅速发展到百位数、从第一个迭代版本到第几十个的迭代版本、从单一结构发展到
+多元化结构、从年会时３桌的人数迅速发展到上10桌的人数、奖项从单一到多元化和人性化的分布。2013年是成长的一年，也是快乐的一年，因为和你们在一起。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2014 year department party, Ｗe are here in the sand beach party，where are you ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;sand beach party&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118000.jpg&quot; alt=&quot;sand beach party&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;现场盛会&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118010.jpg&quot; alt=&quot;现场盛会&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;我们的掌柜（Boss）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118011.jpg&quot; alt=&quot;我们的掌柜&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;金立移动互联网运营部　各位大佬们&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118001.jpg&quot; alt=&quot;金立移动互联网运营部　各位大佬们&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;青春活力的萌妹纸&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118002.jpg&quot; alt=&quot;青春活力的萌妹纸&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;卡哇伊的妹纸&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118003.jpg&quot; alt=&quot;卡哇伊的妹纸&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;艺样的演技，人气之王&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118004.jpg&quot; alt=&quot;艺样的演技，人气之王&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;各种舞蹈，各种帅锅美女&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118005.jpg&quot; alt=&quot;各种舞蹈，各种帅锅美女&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;有了弓箭10,再也不用担心打羽毛球啦&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118006.jpg&quot; alt=&quot;有了弓箭10,再也不用担心打羽毛球啦&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;非诚勿扰，这在等你&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118007.jpg&quot; alt=&quot;非诚勿扰，这在等你&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;法海大闹许仙&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118008.jpg&quot; alt=&quot;法海大闹许仙&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;比翼双飞，让我们飞的很高&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pic/20140118009.jpg&quot; alt=&quot;比翼双飞，让我们飞的很高&quot;&gt;&lt;/p&gt;
 </content>
    </entry>
    
@@ -540,121 +600,6 @@ border:1px solid #F8F8F8;
 &lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/basics&quot;&gt;http://daringfireball.net/projects/markdown/basics&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/Markdown&quot;&gt;http://zh.wikipedia.org/wiki/Markdown&lt;/a&gt;&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>Ubuntu下通过Heroku部署Node.js应用程序</title>
-     <link href="http://hankewins.com/2013/09/17/ubuntu-heroku-build-node-app.html"/>
-     <updated>2013-09-17T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/09/17/ubuntu-heroku-build-node-app</id>
-     <content type="html">&lt;p&gt;自从写第一个Node &lt;a href=&quot;https://github.com/hankewins/microblog&quot;&gt;Microblog&lt;/a&gt; web应用到现在也很长时间了，虽然后面也写了几个Node小工具，但是一直都是基于本地环境。虽然之前也有尝试在&lt;a href=&quot;http://sae.sina.com.cn/&quot;&gt;SAE&lt;/a&gt;、&lt;a href=&quot;http://cnodejs.net/&quot;&gt;NAE&lt;/a&gt;(已停止维护)、&lt;a href=&quot;http://developer.baidu.com/bae&quot;&gt;BAE&lt;/a&gt;上部署Node应用程序，但由于种种原因，最终也只是一个尝试，没有成功部署，在此还是推荐几家PaaS平台：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt;(信赖Git+Foreman)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cloudfoundry.com/&quot;&gt;Cloud Foundry&lt;/a&gt;(依赖vmc+ruby+rubyGems)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://nodester.com/&quot;&gt;Nodester&lt;/a&gt;(被AppFog收购)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.appfog.com/&quot;&gt;AppFog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;可根据自己的喜好与对PaaS不同平台的了解，选择适合的平台，本文选择Heroku来部署。&lt;/p&gt;
-
-&lt;h3&gt;Heroku部署Node.js应用程序的步骤如下：&lt;/h3&gt;
-
-&lt;p&gt;1.访问 https://id.heroku.com/signup/www-header ，网站会要求用户输入电子邮件地址。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://d.pcs.baidu.com/thumbnail/674d662b160af87564c0a8d69b43f3a6?fid=3945756521-250528-1189295403&amp;amp;time=1379487979&amp;amp;sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-mO2iglR6lMoofgCGPtg%2FbMlOgck%3D&amp;amp;rt=sh&amp;amp;expires=8h&amp;amp;r=234731748&amp;amp;size=c850_u580&amp;amp;quality=100&quot; alt=&quot;Heroku注册&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;2.一旦成功输入电子邮件地址，网站会邀请你检查邮件，邮件中有确认链接。&lt;/p&gt;
-
-&lt;p&gt;3.打开电子邮件，进入所提供的Heroku链接，点击链接会邀请你输入密码。&lt;/p&gt;
-
-&lt;p&gt;4.按照 https://devcenter.heroku.com/articles/getting-started-with-nodejs 中的指南，首先安装Heroku工具条。它提供了能让我们将站点部署到Heroku的命令行工具。&lt;/p&gt;
-
-&lt;p&gt;5.访问 https://toolbelt.heroku.com/ ，选择适用于自己平台的安装方式，这里我选择的是 Debian/Ubuntu。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://d.pcs.baidu.com/thumbnail/094170e1d78c32ff21d4ce075be43f95?fid=3945756521-250528-3942802264&amp;amp;time=1379487979&amp;amp;sign=FDTAR-DCb740ccc5511e5e8fedcff06b081203-S73Z8WuWtSC7sAlctiX5yX6L0ls%3D&amp;amp;rt=sh&amp;amp;expires=8h&amp;amp;r=924489444&amp;amp;size=c850_u580&amp;amp;quality=100&quot; alt=&quot;安装Heroku命令行工具&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;6.Heroku toolbelt安装完成后，现在就可以登录账号，在命令行模式下输入
-&lt;pre&gt;
-    $ heroku login
-    //输入heroku注册的账号信息
-    Enter your Heroku credentials.
-    Email: test@gmail.com
-    Password (typing will be hidden):
-    //如果是第一次登录，heroku会为你生成一个SSH公共密钥，
-    //以此来管理对服务的访问，可在heroku账号设置中查看
-    Could not find on existing public key.
-    Would you like to generate one? [Yn]
-    Generating new SSH public key.
-    Uploading ssh public key ~/.ssh/id_rsa.pub
-&lt;/pre&gt;&lt;/p&gt;
-
-&lt;p&gt;7.至此，Heroku环境配置己完成，可以准备部署到Heroku服务器啦！&lt;/p&gt;
-
-&lt;p&gt;8.检查程序入口文件中服务器端口设置是否正确。
-&lt;pre&gt;&lt;br&gt;
-    //Express 默认端口配置
-    var port = process.env.PORT || 3000;
-    //由于heroku会随机分配端口，因此不用指定固定端口
-    app.listen(port);
-&lt;/pre&gt;
-9.Heroku的进程管理工具Foreman需要通过Procfile文件来声明应该默认启动的文件，因此需在应用程序根目录添加一个名为Procfile的文件，如下所示：
-&lt;pre&gt;
-    //进入应用程序根目录，声明启动的文件
-    $ echo &amp;quot;web: node app.js&amp;quot; &amp;gt; Procfile
-    //通过Foreman启动应用程序
-    $ forman start
-    14:06:24 web.1  | started with pid 5105
-    14:06:26 web.1  | Express server listening on port 5000
-&lt;/pre&gt;
-10.Foreman启动成功后，可以通过本地访问应用程序，最现只差上传应用程序到Heroku。
-&lt;pre&gt;&lt;br&gt;
-    //在应用程序package.json文件中指定engines
-    &amp;quot;engines&amp;quot;: {
-        &amp;quot;node&amp;quot;: &amp;quot;0.10.x&amp;quot;,
-        &amp;quot;npm&amp;quot;: &amp;quot;1.2.x&amp;quot;
-    }&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;//检查应用程序package.json中的信赖文件是否安装
-$ npm install
-
-//通过Git添加应用程序到仓库，并上传到Heroku
-$ git init //创建git仓库
-$ git add . //添加文件到仓库
-$ git commit -m &amp;#39;upload to heroku&amp;#39; //提交文件到仓库
-$ heroku create nodetest --stack ceder //在heroku中建立nodetest应用
-$ git push heroku master //提交应用程序到heroku的master主干
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/pre&gt;
-11.如果一切正常，可以通过Heroku分配的二级域名访问应用程序，例如 http://nodetest.herokuapp.com&lt;/p&gt;
-
-&lt;p&gt;12.Heroku支持自定义域名绑定，操作如下：
-&lt;pre&gt;&lt;br&gt;
-    //在以有的域名中添加子域名并指定DNS为Heroku分配的二级域名
-    //以www.nodetest.com为例,添加到heroku自定域名中
-    $ heroku domains:add www.nodetest.com&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;//查看域名信息
-$ heroku domains
-=== nodetest Domain Names
-nodetest.herokuapp.com
-www.nodetest.com
-
-//通过命令行打开并访问应用程序
-$ heroku open
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/pre&gt;&lt;/p&gt;
-
-&lt;h3&gt;参考文档：&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.sina.com.cn/s/blog_6d0cbb0301019jor.html&quot;&gt;http://blog.sina.com.cn/s/blog_6d0cbb0301019jor.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.longwin.com.tw/2011/04/ssh-failure-sign-key-2011/&quot;&gt;http://blog.longwin.com.tw/2011/04/ssh-failure-sign-key-2011/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/ithomer/article/details/7529022&quot;&gt;http://blog.csdn.net/ithomer/article/details/7529022&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.2cto.com/kf/201201/116097.html&quot;&gt;http://www.2cto.com/kf/201201/116097.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ux.etao.com/posts/799&quot;&gt;http://ux.etao.com/posts/799&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;表达不清楚或者不正确的地方，请与我联系hankewins#gmail.com。&lt;/p&gt;
 </content>
    </entry>
    
