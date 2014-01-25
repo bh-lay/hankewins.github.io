@@ -4,13 +4,78 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-01-24T14:45:27+08:00</updated>
+   <updated>2014-01-25T12:48:10+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
      <email>hankewins@gmail.com</email>
    </author>
 
+   
+   <entry>
+     <title>代码发布流程的一些探讨</title>
+     <link href="http://hankewins.com/2014/01/24/how-to-release-your-code-to-online.html"/>
+     <updated>2014-01-24T00:00:00+08:00</updated>
+     <id>http://hankewins.com/2014/01/24/how-to-release-your-code-to-online</id>
+     <content type="html">&lt;p&gt;今天组织了一次&lt;a href=&quot;http://hankewins.com/reveal.html&quot;&gt;代码发布流程研讨会&lt;/a&gt;，指在讨论现有代码发布流程的一些优缺点，通过收集同学们已知的代码发布流程，进行总结并优化现有的代码发布流程。&lt;/p&gt;
+
+&lt;h2&gt;目前我们代码发布流程是怎么样的？&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;开发完成、测试完成&lt;/li&gt;
+&lt;li&gt;前端打包静态文件包&lt;/li&gt;
+&lt;li&gt;后端打包后台文件包（同时修改后台版本号）&lt;/li&gt;
+&lt;li&gt;后台开发汇总前后端文件包&lt;/li&gt;
+&lt;li&gt;邮件运维及相关人员&lt;/li&gt;
+&lt;li&gt;运维整理后，开始更新&lt;/li&gt;
+&lt;li&gt;先更新静态文件包&lt;/li&gt;
+&lt;li&gt;再更新后台文件包&lt;/li&gt;
+&lt;li&gt;最后更新前台文件包&lt;/li&gt;
+&lt;li&gt;中间任一流程出问题，重新更新&lt;/li&gt;
+&lt;li&gt;如更新问题来源于程序，则回滚&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;优点：代码发布完成有运维人员控制，对代码安全以及线上正常运营起到了一定的保障作用。&lt;br&gt;
+缺点：人工手动操作过多、发布流程时间过长、更新依赖性过高、解决线上问题响应过慢。&lt;/p&gt;
+
+&lt;p&gt;通过目前代码发布流程的缺点，我们可以看到由于人工手动操作过多，直接导致程序包不完整的概率，从源头就增加了线上环境不稳定因素，从而引起恶性循环。
+另一方面由于采用CDN技术，静态文件分离，如需更新静态文件必须走发布流程（静态文件更新很频繁），直接导致更新时间过长，对线上问题的响应过慢。&lt;/p&gt;
+
+&lt;h2&gt;IT、通信等企业的发布流程？&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;电商企业（阿里、淘宝、麦包包）&lt;/li&gt;
+&lt;li&gt;传统通信（中兴、华为）&lt;/li&gt;
+&lt;li&gt;IT互联网（百度、腾讯、网易）&lt;/li&gt;
+&lt;li&gt;中小企业、小团队&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;电商企业：根据安全等级分为主业务、子业务。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;主业务——开发完成、测试完成 -&amp;gt; 代码审查 -&amp;gt; 安全审查 -&amp;gt; 技术VP审批 -&amp;gt; 运维团队（灰度发布） -&amp;gt; 运维团队(发布)
+子业务——开发完成、测试完成 -&amp;gt; 代码审查 -&amp;gt; 发布平台
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;传统通信：根据业务范围分为通信业务、互联网业务&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;通信业务——开发完成、测试完成 -&amp;gt; 各应用团队提审　-&amp;gt; 联合审查 -&amp;gt; 测试、调试 -&amp;gt; 生产流程
+互联网业务——开发完成、测试完成 -&amp;gt; 运维团队（预发布）-&amp;gt; 测试通过 -&amp;gt; 技术VP审批 -&amp;gt; 运维团队（发布）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;IT互联网：  根据业务等级分为主业务、子业务。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;主业务——开发完成、测试完成 -&amp;gt; 代码审查 -&amp;gt; 安全审查 -&amp;gt; 技术VP审批 -&amp;gt; 运维团队（灰度发布） -&amp;gt; 运维团队(发布)
+子业务——开发完成、测试完成 -&amp;gt; 发布平台(开发可直接操作)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;中小企业、小团队：根据需求发布&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;发布流程(1)：开发完成（自测完成）-&amp;gt; 开发上传代码到服务器
+发布流程(2)：开发完成（自测完成）-&amp;gt; 开发上传DWZ包、或者其他文件包 -&amp;gt; 运维人员（手动发布）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;以上只是根据内部小伙伴的工作情况，初步的进行总结各企业的发布流程，与实际发布流程可能有较大的出入。（实际发布流程受公司技术管理、公司服务器架构、
+公司规模、公司业务方向、公司战略等各因素的影响）&lt;/p&gt;
+
+&lt;p&gt;根据我们的需求及现有环境，我们缺少灰度发布（预发布）和发布平台，目的是减少手动操作以及提高应对线上业务的响应能力。&lt;/p&gt;
+
+&lt;p&gt;本文章只是粗略的介绍了发布流程，如需了解详细的发布流程，可以给我留言，谢谢！&lt;/p&gt;
+
+&lt;p&gt;最后，如果你有好的发布流程优化方案，希望你能给我们一些帮助！&lt;/p&gt;
+</content>
+   </entry>
    
    <entry>
      <title>从 wordpress 搬迁到 github pages</title>
@@ -590,55 +655,6 @@ $ heroku open
 &lt;/ul&gt;
 
 &lt;p&gt;表达不清楚或者不正确的地方，请与我联系hankewins#gmail.com。&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>记忆人生，勿轻意忘记</title>
-     <link href="http://hankewins.com/2013/09/15/snake-year-in-my-life.html"/>
-     <updated>2013-09-15T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/09/15/snake-year-in-my-life</id>
-     <content type="html">&lt;p&gt;你的人生，你的日子，不要放弃，不要忘记！&lt;/p&gt;
-
-&lt;p&gt;今年是一个特殊的年份;&lt;/p&gt;
-
-&lt;p&gt;今月是一个值得记忆的月份;&lt;/p&gt;
-
-&lt;p&gt;今日是一个难忘的日子;&lt;/p&gt;
-
-&lt;p&gt;今时是一个激动的时刻;&lt;/p&gt;
-
-&lt;p&gt;我的本命年我的生日！&lt;/p&gt;
-
-&lt;h3&gt;人生的本命年&lt;/h3&gt;
-
-&lt;p&gt;百度百科解释：十二年—遇的农历属相所在的年份，俗称属相年。在传统习俗中，本命年常常被认为是一个不吉利的年份。“本命年犯太岁，太岁当头坐，无喜必有祸”的民谣是关于本命年不甚吉利的最好写照。&lt;/p&gt;
-
-&lt;p&gt;虽然在本命年的开始，我也失去了无法忘却的记忆，但是本命年的不利真的是天命吗？其实不然，个人认为都是自己处事的不严谨，造成了人生的插曲。呵呵，还是不要对这些进行评论啦！&lt;/p&gt;
-
-&lt;p&gt;本命年无论是好还是坏，我们都不能忘记，因为人生中能有几个本命年呢。&lt;/p&gt;
-
-&lt;h3&gt;特殊的九月&lt;/h3&gt;
-
-&lt;p&gt;九月是一个秋高气爽的季节;&lt;/p&gt;
-
-&lt;p&gt;九月是一个开始大声高歌a、o、e的季节 ——— 小学;&lt;/p&gt;
-
-&lt;p&gt;九月是一个开始为理想奋斗的季节 ——— 初中、高中;&lt;/p&gt;
-
-&lt;p&gt;九月是一个开始进入梦想殿堂的季节 ——— 大学;&lt;/p&gt;
-
-&lt;p&gt;九月也是爸爸、姐姐和我出生的季节。&lt;/p&gt;
-
-&lt;h3&gt;难忘的今天&lt;/h3&gt;
-
-&lt;p&gt;今天是偷看十五的月亮圆不圆的日子;&lt;/p&gt;
-
-&lt;p&gt;今天是一个月的中旬的日子;&lt;/p&gt;
-
-&lt;p&gt;今天是值得记忆的日子;&lt;/p&gt;
-
-&lt;p&gt;生日快乐！&lt;/p&gt;
 </content>
    </entry>
    
