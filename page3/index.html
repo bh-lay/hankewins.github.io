@@ -109,6 +109,19 @@
             <div class="main">
                 
     <div class="article">
+        <h3 class="title"><a href="http://hankewins.com/2013/08/02/sublime-text-open-dump-bug.html" title="ST2打开.scss文件时自动生成并打开.dump文件的BUG">ST2打开.scss文件时自动生成并打开.dump文件的BUG</a></h3>
+        <article class="rexp">
+            <p><p>今天同事用ST2打开.scss项目文件时，出现自动生成并打开一个.dump文件，而且文件中的代码不再高度显示，分析如下：  </p>
+</p>
+        </article>
+        <a href="http://hankewins.com/2013/08/02/sublime-text-open-dump-bug.html" class="more"><i class="icon-link"></i></a>
+        <div class="info">
+            <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+            <span class="info-date">02 Aug 2013</span>
+        </div>
+    </div>
+
+    <div class="article">
         <h3 class="title"><a href="http://hankewins.com/2013/07/17/javascript-question-collection.html" title="前端系列--Javascript“小题大做”（持续更新...）">前端系列--Javascript“小题大做”（持续更新...）</a></h3>
         <article class="rexp">
             <p><h3>背景</h3>
@@ -199,106 +212,6 @@
         </div>
     </div>
 
-    <div class="article">
-        <h3 class="title"><a href="http://hankewins.com/2013/04/10/how-to-install-sublime-text-2.html" title="前端开发环境（ST2）搭建过程">前端开发环境（ST2）搭建过程</a></h3>
-        <article class="rexp">
-            <p><p><strong>Sublime Text 2（简称：ST2）</strong>是一个实用又好用的编辑器，以其体积小、响应快、功能齐全、操作便捷、插件丰富、跨平台等特性，被前端人员的推崇为神器。</p>
-
-<p>为了促进前端（团队）统一开发环境的正确搭建，现梳理一下我们产品业务中用到的一些插件，以便大家能快速搭建好ST2开发环境。</p>
-
-<p><code>注：ST3版本硬性要求比较高，且与ST2兼容的插件比较少，帮暂不推荐升级。</code></p>
-
-<h3>准备工作</h3>
-
-<p>下载对应版本的ST2:<a href="http://www.sublimetext.com/2">http://www.sublimetext.com/2</a></p>
-
-<h3>开始安装</h3>
-
-<ul>
-<li><p>在windows环境下双击下载的ST2可执行文件即可安装。</p>
-
-<p><a href="http://pan.baidu.com/share/link?shareid=2246429840&amp;uk=3945756521#dir/path=%2F%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83%2F%E5%89%8D%E7%AB%AF%E7%BB%9F%E4%B8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">ST2免费注册码下载</a></p></li>
-<li><p>在linux环境下安装如下：  </p></li>
-</ul>
-
-<p>1.解压并修改ST2文件名</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">tar -xvf sublime_text_2.0.2.tar.bz2  
-mv Sublime\ Text\ 2/ sublime_text_2
-</code></pre></div>
-<p>2.移动到合适的位置，这里选择<code>/usr/lib/</code></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo mv sublime_text_2 /usr/lib/
-</code></pre></div>
-<p>3.命令行（Terminal）下启动ST2</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo ln -s /usr/lib/sublime_text_2/sublime_text /usr/bin/sublime
-</code></pre></div>
-<p>4.创建可使用的应用程序图标（可以放在Launcher下）</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo sublime /usr/share/applications/sublime.desktop
-</code></pre></div>
-<p>5.配置sublime.desktop文件
-    [Desktop Entry]
-    Version=1.0
-    Name=Sublime Text 2
-    # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
-    # From Ubuntu&#39;s language-pack-kde-XX-base packages, version 9.04-20090413.
-    GenericName=Text Editor</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">Exec=sublime
-Terminal=false
-Icon=/usr/lib/sublime_text_2/Icon/48x48/sublime_text.png
-Type=Application
-Categories=TextEditor;IDE;Development
-X-Ayatana-Desktop-Shortcuts=NewWindow
-
-[NewWindow Shortcut Group]
-Name=New Window
-Exec=sublime -n
-TargetEnvironment=Unity
-</code></pre></div>
-<h3>安装ST2 packpage control</h3>
-
-<p>=&gt; 按Ctrl+`调出console  </p>
-
-<p>=&gt; 粘贴以下代码到底部命令行并回车：  </p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">import urllib2,os;pf=&#39;Package Control.sublime-package&#39;;ipp=sublime.installed_packages_path();
-os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),&#39;wb&#39;).write(urllib2.
-urlopen(&#39;http://sublime.wbond.net/&#39;+pf.replace(&#39; &#39;,&#39;%20&#39;)).read())
-</code></pre></div>
-<p>=&gt; 重启Sublime Text 2</p>
-
-<p>如果在Perferences-&gt;package settings中看到package control这一项，则安装成功或者<code>Ctrl+Shift+p</code>调出的面板中搜索<code>install package</code>如果存在，则代表安装成功。</p>
-
-<p>至此，ST2的安装已全部完成，下面我们要安装业务中所需要的插件。</p>
-
-<h3>安装sublime Text 插件的一般步骤：</h3>
-
-<p>=&gt; 按住Ctrl+Shift+P<br>
-=&gt; 在出现的输入框中输入install<br>
-=&gt; 选择package control:install packpage回车<br>
-=&gt; 输入需安装的插件名称进行检索 
-=&gt; 选中对应的插件，按回车 
-=&gt; 稍定一会儿，插件正在安装中，注意右下角状态栏会显示正在连接的提示文字  </p>
-
-<h3>前端Team需安装的插件</h3>
-
-<ul>
-<li><p>安装compass插件</p></li>
-<li><p>安装sass插件</p></li>
-<li><p>安装zendcoding插件</p></li>
-<li><p>安装YUI Compressor代码压缩插件</p></li>
-<li><p>安装Sublime codeIntel代码提示插件</p></li>
-<li><p>安装Alignment代码等号对齐插件</p></li>
-<li><p>安装GBK Encoding Support插件</p></li>
-<li><p>安装DocBlockr插件</p></li>
-<li><p>安装BracketHighlighter插件</p></li>
-</ul>
-</p>
-        </article>
-        <a href="http://hankewins.com/2013/04/10/how-to-install-sublime-text-2.html" class="more"><i class="icon-link"></i></a>
-        <div class="info">
-            <span class="info-title"><i class="icon-calendar"></i> Published: </span>
-            <span class="info-date">10 Apr 2013</span>
-        </div>
-    </div>
-
 
     <nav class="pagination fn-clear">
         <span class="pagination-icon"><i class=" icon-copy"></i></span>
@@ -341,6 +254,8 @@ urlopen(&#39;http://sublime.wbond.net/&#39;+pf.replace(&#39; &#39;,&#39;%20&#39;
                     <h4 class="title">Recent Posts</h4>
                     <ul class="list">
                         
+                            <li><a href="http://hankewins.com/2014/01/26/gionee-group-annual-party.html" title="2014年新金立新征程" rel="bookmark">2014年新金立新征程</a></li>
+                        
                             <li><a href="http://hankewins.com/2014/01/24/how-to-release-your-code-to-online.html" title="代码发布流程的一些探讨" rel="bookmark">代码发布流程的一些探讨</a></li>
                         
                             <li><a href="http://hankewins.com/2014/01/22/wordpress-blog-to-github-pages.html" title="从 wordpress 搬迁到 github pages" rel="bookmark">从 wordpress 搬迁到 github pages</a></li>
@@ -350,8 +265,6 @@ urlopen(&#39;http://sublime.wbond.net/&#39;+pf.replace(&#39; &#39;,&#39;%20&#39;
                             <li><a href="http://hankewins.com/2013/12/28/2013-year.html" title="2013年终总结" rel="bookmark">2013年终总结</a></li>
                         
                             <li><a href="http://hankewins.com/2013/10/23/is-time-to-think-about-frontend-future.html" title="阿里前端的困局与突围(转)" rel="bookmark">阿里前端的困局与突围(转)</a></li>
-                        
-                            <li><a href="http://hankewins.com/2013/10/17/web-rebuild-party.html" title="蜕变·WebRebuild 2013 前端年度交流盛会邀请" rel="bookmark">蜕变·WebRebuild 2013 前端年度交流盛会邀请</a></li>
                         
                     </ul>
                 </div>
