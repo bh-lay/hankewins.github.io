@@ -4,13 +4,77 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-02-10T10:34:28+08:00</updated>
+   <updated>2014-02-18T21:13:00+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
      <email>hankewins@gmail.com</email>
    </author>
 
+   
+   <entry>
+     <title>解决HTML5移动开发中边框显示2px</title>
+     <link href="http://hankewins.com/2014/02/18/how-to-development-a-navtive-app-for-html5.html"/>
+     <updated>2014-02-18T00:00:00+08:00</updated>
+     <id>http://hankewins.com/2014/02/18/how-to-development-a-navtive-app-for-html5</id>
+     <content type="html">&lt;p&gt;让我们一起来回顾一下，HTML5移动开发过程中遇到的一些问题，总结起来也就以下几个方面：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;图片适配（图片大小、图片质量）&lt;/li&gt;
+&lt;li&gt;PSD设计稿与页面大小的适配&lt;/li&gt;
+&lt;li&gt;页面中元素的边框显示双倍（不像Andorid原生开发中显示的非常清晰）&lt;/li&gt;
+&lt;li&gt;字体大小的适配&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由于项目的特殊性，需要HTML5应用更加的贴近Andoird原生应用，现需要解决HTML５页面中边框显示2px的问题。因此本篇文章主要是针对页面中元素边框显示成2px的问题的探讨，如对其他几个问题感兴趣可以查看我之前分享的PPT&lt;a href=&quot;https://speakerdeck.com/hankewins/yi-dong-qian-duan-kai-fa-na-xie-shi&quot;&gt;《移动前端开发那些事》&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;引起HTML5移动端适配的主要原因是因为移动端设备存多分辨率、多尺寸的问题，针对元素边框显示成2px(实际设置的是1px),主要是移动端设备的DPI引起,那么我们可以通过几下方式解决此问题：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;设置META属性中viewport的initial-scale=0.5&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=0.5 minimum-scale=0.5, maximum-scale=0.5, user-scalable=no&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;通过CSS3 box-shadow 设置内阴影&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;box-shadow:inset 0 0 1px #000;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;通过CSS3背景渐变和背景大小设置&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;.border1px-b,.border1px-tb {
+    border:1px #c8c7cc solid;
+    background-image:none
+}
+
+.border1px-b {
+    border-width:0 0 1px
+}
+
+.border1px-tb {
+    border-width:1px 0
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2.0) {
+    .border1px-b {
+        background:-webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left bottom repeat-x;
+    }
+
+    .border1px-tb {
+        background:-webkit-gradient(linear,left bottom,left top,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left top repeat-x,-webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left bottom repeat-x;
+    }
+
+    .border1px-b,.border1px-tb {
+        background-size:100% 1px;
+        -wekit-background-size:100% 1px;
+        border:0 none;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;参考文章&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://weizhifeng.net/viewports.html&quot;&gt;两个viewport的故事&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.phpstudy.net/css3/&quot;&gt;CSS3参考手册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ecd.tencent.com/css3/guide.html&quot;&gt;CSS3动画手册&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+   </entry>
    
    <entry>
      <title>2014年新金立新征程</title>
@@ -257,6 +321,46 @@
 &lt;p&gt;读书方面，粗略的看了这几本书， Nodejs 、MongoDB、JavascripMVC、淘宝技术这十年等，但对技术文章的阅读上有了很大的提高，同时对提高自身修养方面的关注度也近一步提高了。&lt;/p&gt;
 
 &lt;p&gt;最后的最后，跟我们家的“执子闲人”恋爱四年了，回想过去我们也遇到过很多的艰难，最终都挺过来了，感谢在我最困惑的时候，有你的陪伴。我相信，以后无论发生什么，我们都能一路走下去。&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>移动开发总结（转）</title>
+     <link href="http://hankewins.com/2013/11/20/html5-and-css3-for-mobile-development.html"/>
+     <updated>2013-11-20T00:00:00+08:00</updated>
+     <id>http://hankewins.com/2013/11/20/html5-and-css3-for-mobile-development</id>
+     <content type="html">&lt;p&gt;1、低版本Android下input有CSS3动画会让输入框失去焦点，解决办法是低版本Android下去掉所有CSS3动画。
+.ua-ios .ipt{-webkit-transition:all .5s;-moz-transition:all .5s;-o-transition:all .5s;-ms-transition:all .5s;transition:all .5s}
+.ua-oldAndroid .ipt {-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;}&lt;/p&gt;
+
+&lt;p&gt;2、-webkit-user-modify: read-write-plaintext-only; 作用是去掉输入框聚焦时候的白色背景 ；
+但是这里有一个问题，Android4.0以上的系统，当软键盘激活出来的时候read-write-plaintext-only的输入框不会居中在屏幕中间，这里需要根据实际情况进行取舍。&lt;/p&gt;
+
+&lt;p&gt;3、translate3d可以让IOS启用硬件渲染，动画效果会更加流畅，基本上能解决所有抖动；但在Android下带来新的问题——只要页面里面有节点拥有transform属性，输入框都会不正常（聚焦不正常、输入时上下抖动等），此外还会导致节点渲染变慢（如点击出下啦菜单渲染缓慢）。
+再次强调CSS3的动画、投影在Android下尽量避免。
+.ua-ios .mail-list .list-item,
+.ua-ios .menu-item,
+.ua-ios .menu-split{
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}&lt;/p&gt;
+
+&lt;p&gt;4、Android 2.3.7 下不加透明border，会导致溢出隐藏失效。
+.atts .att-preview{overflow:hidden;width:50px;height:50px;border:1px solid transparent;}&lt;/p&gt;
+
+&lt;p&gt;5、IOS下fixed定位（比如框架顶部提示信息），当键盘收起的时候会有残影：fixed元素不会随着键盘收起而移动到页面顶部，而是保持在页面中间，需要hack改成绝对定位。
+.frame-tips{position:fixed;z-index:30;left:0;top:0}
+.ua-ios .frame-tips{position: absolute}&lt;/p&gt;
+
+&lt;p&gt;6、在iPad1等低版ios下，opacity和其他属性一起改变，会导致transition中重复执行三次，所以要么只改变opacity实现淡入淡出，要么只改变非opacity属性。
+.mRead-reply .btn{position:absolute;right:0;top:0;/&lt;em&gt;opacity:0;&lt;/em&gt;/overflow:hidden;display:block;width:64px}&lt;/p&gt;
+
+&lt;p&gt;7、在Android4.1下，如果textarea聚焦的时候，其高度或者其兄弟节点的高度产生变化，那么textarea就会被软键盘挡住而不会自动调整位置，这里需要去掉所有效果，默认显示输入框展开状态。所以Android下尽量不要在textarea和input上做动画。&lt;/p&gt;
+
+&lt;p&gt;8、Android下div的高度设置成100%，同时设置其overflow:auto;那么滚动条就会出现在这个div上面。
+这个时候会出现抖动，所以建议Android下页面的滚动能且只能出现在body节点上面！&lt;/p&gt;
+
+&lt;p&gt;原文章地址：http://ntesmailfetc.blog.163.com/blog/static/20628706120139184457401/&lt;/p&gt;
 </content>
    </entry>
    
@@ -523,72 +627,6 @@ border:1px solid #F8F8F8;
 @media all and (min-width:359px) and (-webkit-min-device-pixel-ratio:1.5){html{font-size:22.5px;}}&lt;/p&gt;
 
 &lt;p&gt;（持续更新......）&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>总结在金立工作的一年</title>
-     <link href="http://hankewins.com/2013/10/07/work-in-gionee-for-one-year.html"/>
-     <updated>2013-10-07T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/10/07/work-in-gionee-for-one-year</id>
-     <content type="html">&lt;p&gt;2012年9月下旬加入金立(GiONEE),从事移动互联网H5研发工作。&lt;/p&gt;
-
-&lt;p&gt;在金立的这一年，首先要感谢@rainkid和@valleykid对我的认可以及信任，特别感谢@valleykid在工作中的指导及帮助，其次要感谢@华仔和@老田在工作中的默契的配合以及主动帮助，最后要感谢其他小伙伴们在工作与生活中给予援助。有你们的陪伴让感受到家的气息。&lt;/p&gt;
-
-&lt;p&gt;2012年是大家谈论世界末日的一年;&lt;/p&gt;
-
-&lt;p&gt;2012年是我开启淘宝网店创业的一年;&lt;/p&gt;
-
-&lt;p&gt;2012年是智能手机席卷的一年;&lt;/p&gt;
-
-&lt;p&gt;2012年是移动开发燎原的一年;&lt;/p&gt;
-
-&lt;p&gt;2012年是人生风向标指引的一年;&lt;/p&gt;
-
-&lt;p&gt;......&lt;/p&gt;
-
-&lt;p&gt;2012年对我来说是如此的重要，在特定的地方，特定的时间，遇到特定的机遇 ---- 正式进入移动开发。&lt;/p&gt;
-
-&lt;p&gt;在金立这一年的收获：&lt;/p&gt;
-
-&lt;p&gt;1.鉴证了金立移动互联网的组建&lt;/p&gt;
-
-&lt;p&gt;2.鉴证团队的组建与完善&lt;/p&gt;
-
-&lt;p&gt;3.鉴证了项目迭代的各个环节&lt;/p&gt;
-
-&lt;p&gt;4.了解了PC端开发与移动端开发的区别&lt;/p&gt;
-
-&lt;p&gt;5.参与前端库组件开发&lt;/p&gt;
-
-&lt;p&gt;6.管理与规划&lt;/p&gt;
-
-&lt;p&gt;总结在金立这一年，学到的不仅仅是技术，更多的是一个公司转型的过程，一个团队成长的历程，一个项目成熟的经过以及个人人生方向的指引。&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>精彩国庆，娱乐人生</title>
-     <link href="http://hankewins.com/2013/10/07/happy-national-day.html"/>
-     <updated>2013-10-07T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/10/07/happy-national-day</id>
-     <content type="html">&lt;p&gt;今年的国庆假期可以简单的概括为“精彩国庆，娱乐人生”！&lt;/p&gt;
-
-&lt;p&gt;没有加班，没有旅行，也没有回家，只有娱乐。有点遗憾的是没有及时的打电话回家，让爸妈担心啦！&lt;/p&gt;
-
-&lt;p&gt;国庆的娱乐-游戏LOL,虽然国庆大部分时间都是在游戏中渡过的，可能关心我的朋友们在心里都认为我现在“颓废”了,其实我很清楚，自己在做什么，应该做什么。有时候感觉人很奇怪，有太多的想法，有太多的事，有太多的......,我记得某次分享中提到“用心感受生活，用视觉鞭笞思想”的主题，我想与工作了几年了解了一些国外的文化以及公司文化等等，让我视野开阔了，接受了一些新的思想，有了“丰富”的阅历。&lt;/p&gt;
-
-&lt;p&gt;今年的国庆让我有以下的收获：&lt;/p&gt;
-
-&lt;p&gt;1.冷静思考了近期的规划。&lt;/p&gt;
-
-&lt;p&gt;2.学会了主动分享以及分享的价值。&lt;/p&gt;
-
-&lt;p&gt;3.奉献与回报的意义。&lt;/p&gt;
-
-&lt;p&gt;4.团队精神的重要性。&lt;/p&gt;
-
-&lt;p&gt;5.愉快的心情。&lt;/p&gt;
 </content>
    </entry>
    
