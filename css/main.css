@@ -20,7 +20,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     font-family: Georgia, Hiragino Sans GB,\5b8b\4f53;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+    /*text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -263,14 +263,23 @@ a         { color: #91736b; text-decoration: none; }
 }
 
 .main .article pre {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     padding: 10px 10px;
-    color: #4d4d4d;
-    background: rgba(0, 0, 0, 0.1);
+    /*color: #4d4d4d;
+    background: rgba(0, 0, 0, 0.1);*/
     overflow: auto;
+    white-space:pre;
+    white-space:pre-wrap;
+    word-break:break-all;
+    word-wrap:break-word;
+    border-radius: 2px;
 }
 .main .highlight {
     position: relative;
+}
+
+.main .highlight li{
+    list-style-type: decimal;
 }
 
 .main .highlight pre:after {
@@ -281,12 +290,12 @@ a         { color: #91736b; text-decoration: none; }
     position: absolute;
     top: 0;
     left: -62px;
-    background: #44635d;
-    background: -moz-linear-gradient(0deg, #44635d 0%, #44635d 90%,  #263733 100%);
+    background: #333;
+/*    background: -moz-linear-gradient(0deg, #44635d 0%, #44635d 90%,  #263733 100%);
     background: -webkit-linear-gradient(0deg, #44635d 0%, #44635d 90%, #263733 100%);
     background: -o-linear-gradient(0deg, #44635d 0%,#44635d 90%,   #263733 100%);
     background: -ms-linear-gradient(to 0deg, #44635d 0%, #44635d 90%,  #263733 100%);
-    background: linear-gradient(to 0deg, #44635d 0%,#44635d 90%,   #263733 100%);
+    background: linear-gradient(to 0deg, #44635d 0%,#44635d 90%,   #263733 100%);*/
     font-size: 12px;
     line-height: 32px;
     text-align: center;

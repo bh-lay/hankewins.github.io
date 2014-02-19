@@ -4,13 +4,66 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-02-18T21:13:00+08:00</updated>
+   <updated>2014-02-19T20:58:38+08:00</updated>
    <id>http://hankewins.com</id>
    <author>
      <name>Hankewins</name>
      <email>hankewins@gmail.com</email>
    </author>
 
+   
+   <entry>
+     <title>Jekyll中使用google-code-prettify语法高亮</title>
+     <link href="http://hankewins.com/2014/02/19/jekyll-use-google-code-prettify.html"/>
+     <updated>2014-02-19T00:00:00+08:00</updated>
+     <id>http://hankewins.com/2014/02/19/jekyll-use-google-code-prettify</id>
+     <content type="html">&lt;p&gt;之前使用wordpress时，一直都是用的SyntaxHIghlighter代码高亮的工具，虽然SyntaxHIghlighter的代码高亮显示的很漂亮，无奈加载太慢，且对markdown写的文章支持的还不是很好，只能舍弃了。现在用的这个是google-code-prettfy，效果也相当不错。最重要的是，非常小，加载速度比SyntaxHighlighter快得多，而且，可以直接使用markdown的语法去写代码。&lt;/p&gt;
+
+&lt;h3&gt;准备工作&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.google.com/p/google-code-prettify/&quot;&gt;Google Code Prettify下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html&quot;&gt;主题库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;第一步：引用prettify.css和prettify.js&lt;/h3&gt;
+
+&lt;p&gt;将下载后的Prettify压缩文件解压到指定文件文件夹,将prettify.css和prettify.js文件放到项目文件夹下（例如：assets/theme/prettify目录）,然后打开需要引用的页面，添加如下代码：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;link href=&amp;quot;/assets/themes/prettify/prettify.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; media=&amp;quot;all&amp;quot;&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/assets/themes/prettify/prettify.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;考虑到加载速度，最好将js写到文档末尾，body闭合标签之前，css写到头部&lt;/p&gt;
+
+&lt;h3&gt;第二步：高亮代码块&lt;/h3&gt;
+
+&lt;p&gt;添加以下代码，用于识别并高亮代码块&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    // 需要引入jQuery
+    $(document).ready(function() {
+        $(&amp;#39;pre&amp;#39;).addClass(&amp;#39;prettyprint linenums&amp;#39;).attr(&amp;#39;style&amp;#39;, &amp;#39;overflow:auto&amp;#39;);
+        prettyPrint();
+    });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;第三步：显示全部行号&lt;/h3&gt;
+
+&lt;p&gt;默认prettify只显示行号5,10,15...,可以给&lt;code&gt;pre&lt;/code&gt;标签下的li设置以下样式&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;pre li{ list-style-type: decimal; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;第四步：选择喜欢的主题样式&lt;/h3&gt;
+
+&lt;p&gt;打开&lt;a href=&quot;http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html&quot;&gt;主题库&lt;/a&gt;选择喜欢的主题，并复制或者下载主题样式文件，替换默认主题样式文件（prettify.css）,本文使用的主题是Desert&lt;/p&gt;
+
+&lt;h3&gt;第五步：完成&lt;/h3&gt;
+
+&lt;p&gt;到此Google Code Prettify已可以正常使用了，现在可以直接用markdown的前置4空格来写代码了。&lt;/p&gt;
+
+&lt;p&gt;另外，如果博客中的代码块存在滚动条可以通过如下代码实现自动换行&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;white-space:pre;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如在操作过程中存在任何问题，请给我留言，谢谢！&lt;/p&gt;
+</content>
+   </entry>
    
    <entry>
      <title>解决HTML5移动开发中边框显示2px</title>
@@ -37,34 +90,37 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;box-shadow:inset 0 0 1px #000;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;通过CSS3背景渐变和背景大小设置&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;.border1px-b,.border1px-tb {
-    border:1px #c8c7cc solid;
-    background-image:none
-}
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+    .border1px-b,.border1px-tb {
+        color:red;
+        border:1px #c8c7cc solid;
+        background-image:none
+    }
 
-.border1px-b {
-    border-width:0 0 1px
-}
-
-.border1px-tb {
-    border-width:1px 0
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:2.0) {
     .border1px-b {
-        background:-webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left bottom repeat-x;
+        border-width:0 0 1px
     }
 
     .border1px-tb {
-        background:-webkit-gradient(linear,left bottom,left top,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left top repeat-x,-webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left bottom repeat-x;
+        border-width:1px 0
     }
 
-    .border1px-b,.border1px-tb {
-        background-size:100% 1px;
-        -wekit-background-size:100% 1px;
-        border:0 none;
+    @media screen and (-webkit-min-device-pixel-ratio:2.0) {
+        .border1px-b {
+            background:-webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left bottom repeat-x;
+        }
+
+        .border1px-tb {
+            background:-webkit-gradient(linear,left bottom,left top,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left top repeat-x,-webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#c8c7cc),to(#c8c7cc)) left bottom repeat-x;
+        }
+
+        .border1px-b,.border1px-tb {
+            background-size:100% 1px;
+            -wekit-background-size:100% 1px;
+            border:0 none;
+        }
     }
-}
+&amp;lt;/style&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;参考文章&lt;/h2&gt;
 
@@ -512,121 +568,6 @@ web前端设计主题分享、现场来宾主题交流对话探讨。&lt;/p&gt;
 &lt;p&gt;从2007年至今，WebRebuild.ORG得到了W3C中国、Google中国、腾讯、迅雷、网易、欢聚时代、百家筝鸣古筝教育集团等企业组织、同行及会议组委志愿者的大力支持与帮助，已成为中国前端盛大的行业盛会之一。&lt;/p&gt;
 
 &lt;p&gt;广州、上海、北京、成都地区更多详细信息及参会报名请访问WebRebuild官方网站查阅：&lt;a href=&quot;http://www.webrebuild.org&quot;&gt;http://www.webrebuild.org&lt;/a&gt;或收听WebRebuild微信公众帐号（webrebuildorg）获取最新信息。&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>移动平台前端开发总结</title>
-     <link href="http://hankewins.com/2013/10/14/summary-of-mobile-frontend-development.html"/>
-     <updated>2013-10-14T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/10/14/summary-of-mobile-frontend-development</id>
-     <content type="html">&lt;p&gt;移动平台前端开发主要是指针智能手机（iphone、android）做站点适配，并非是针对普通手机开发Wap 2.0，所以在阅读本篇文章以前，你需要对webkit内核的浏览器有一定的了解，需要对HTML5和CSS3有一定的了解。&lt;/p&gt;
-
-&lt;p&gt;1、移动前端开发webkit内核中的一些私有的meta标签&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no&quot; /&gt; &lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览；&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;apple-touch-fullscreen&quot; content=&quot;yes&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; Iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; Iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; Iphone设备中的safari私有meta标签，它表示：&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 告诉设备忽略将页面中的数字识别为电话号码&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;format-detection&quot; content=&quot;email=no&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 告诉设备忽略将页面中的电子邮箱&lt;/p&gt;
-
-&lt;p&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/static/images/identity/HTML5_Badge_64.png&quot; /&gt;(IOS)
-&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;http://spion.blog.163.com/blog/iphone_milanoo.png&quot; /&gt;(Android)&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 说明： 这个link就是设置web app的放置主屏幕上icon文件路径。图片尺寸可以设定为57&lt;em&gt;57（px）或者Retina可以定为114&lt;/em&gt;114（px），ipad尺寸为72*72（px）&lt;/p&gt;
-
-&lt;p&gt;注：红色部分为H5模板页面通用设置项。&lt;/p&gt;
-
-&lt;p&gt;2、如何去除IOS和Android中的输入URL的控件条&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; setTimeout(scrollTo,0,0,10); 请注意，这句代码必须放在window.onload里才能够正常的工作，而且你的当前文档的内容高度必须是高于窗口的高度时，这句代码才能有效的执行。&lt;/p&gt;
-
-&lt;p&gt;3、如何关闭IOS中键盘自动大写&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 我们知道在iOS中，当虚拟键盘弹出时，默认情况下键盘是开启首字母大写的功能的，根据某些业务场景，可能我们需要关闭这个功能，移动版本webkit为input元素提供了autocapitalize属性，通过指定autocapitalize=”off”来关闭键盘默认首字母大写。&lt;/p&gt;
-
-&lt;p&gt;4、IOS中如何彻底禁止用户在新窗口打开页面&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 有时我们可能需要禁止用户在新窗口打开页面，我们可以使用a标签的target=”_self“来指定用户在新窗口打开，或者target属性保持空，但是你会发现iOS的用户在这个链接的上方长按3秒钟后，iOS会弹出一个列表按钮，用户通过这些按钮仍然可以在新窗口打开页面，这样的话，开发者指定的target属性就失效了，但是可以通过指定当前元素的-webkit-touch-callout样式属性为none来禁止iOS弹出这些按钮。这个技巧仅适用iOS对于Android平台则无效。&lt;/p&gt;
-
-&lt;p&gt;5、IOS中如何禁止用户保存图片＼复制图片&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 我们可以为一个img标签指定-webkit-touch-callout为none也会禁止设备弹出列表按钮，这样用户就无法保存＼复制你的图片了。&lt;/p&gt;
-
-&lt;p&gt;6、IOS中如何禁止用户选中文字(Android同样有效)&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 我们通过指定文字标签的-webkit-user-select属性为none便可以禁止iOS用户选中文字。&lt;/p&gt;
-
-&lt;p&gt;7、学会使用webkit-box&lt;/p&gt;
-
-&lt;p&gt;8、如何解决android平台中页面无法自适应&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 虽然你的html和css都是完全自适应的，但有一天如果你发现你的页面在android中显示的并不是自适应的时候，首先请你确认你的head标签中是否包含以下meta标签：&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;&quot;/&gt;&lt;/p&gt;
-
-&lt;p&gt;如果有的话，那请你再仔细的看清楚有没有这个属性的值width=device-width，如果没有请立即加上吧！&lt;/p&gt;
-
-&lt;p&gt;9、如何解决iOS 4.3版本中safari对页面中5位数字的自动识别和自动添加样式&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; iOS4.3版本，升级后对safari造成了一个bug：即使你添加了如下的meta标签，safari仍然会对页面中的5位连续的数字进行自动识别，并且将其重新渲染样式，也就是说你的css对该标签是无效的。&lt;/p&gt;
-
-&lt;p&gt;&lt;meta name=&quot;format-detection&quot;content=&quot;telphone=no&quot;/&gt;&lt;/p&gt;
-
-&lt;p&gt;如下改写：&lt;/p&gt;
-
-&lt;p&gt;&lt;button style=&quot;background:none;padding:0;border:0;&quot;&gt;12345.00&lt;/button&gt;元&lt;/p&gt;
-
-&lt;p&gt;10、如何解决Android 2.0以下平台中圆角的问题&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 考虑到border-radius的兼容性问题，使用如下方式：&lt;/p&gt;
-
-&lt;p&gt;定义4个圆角
-border:1px solid #F8F8F8;
--webkit-border-radius:5px;&lt;/p&gt;
-
-&lt;p&gt;定义部分圆角
-border:1px solid #F8F8F8;
--webkit-border-radius:5px;
--webkit-border-top-left-raduis:0;
--webkit-border-bottom-left-radius:0;&lt;/p&gt;
-
-&lt;p&gt;11、如何解决Android浏览器中webapp中圆角后存在背景色的问题（针对特定生产商的Android浏览器）&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 可以通过设置父层与子层元素都具有相同圆角，并设置父层元素的背景后与底色一致。&lt;/p&gt;
-
-&lt;p&gt;12、如何解决移动开发中字体适配问题&lt;/p&gt;
-
-&lt;p&gt;=&amp;gt; 我们推荐采用CSS3,新的长度单位REM(REM是相对长度单位。相对于根元素(即html元素)font-size计算值的倍数)。&lt;/p&gt;
-
-&lt;p&gt;/*
- * 1rem=20px for 320px(中低端分辨率).
- * 1rem=22.5px for 360px(高端分辨率).
- */&lt;/p&gt;
-
-&lt;p&gt;html{font-size:20px; -webkit-text-size-adjust:none;}
-@media all and (min-width:359px){.uc-hack{font-size:22.5px;}}
-@media all and (min-width:359px) and (-webkit-min-device-pixel-ratio:1.5){html{font-size:22.5px;}}&lt;/p&gt;
-
-&lt;p&gt;（持续更新......）&lt;/p&gt;
 </content>
    </entry>
    

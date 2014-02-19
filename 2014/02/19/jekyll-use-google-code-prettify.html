@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ST2打开.scss文件时自动生成并打开.dump文件的BUG - Hankewins Blog</title>
+    <title>Jekyll中使用google-code-prettify语法高亮 - Hankewins Blog</title>
     <!-- meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Jekyll" />
@@ -109,42 +109,63 @@
         <div class="container fn-clear">
             <div class="main">
                 <div class="article article-post">
-    <h2 class="title">ST2打开.scss文件时自动生成并打开.dump文件的BUG</h2>
+    <h2 class="title">Jekyll中使用google-code-prettify语法高亮</h2>
     <div class="info">
         <span class="info-title"><i class="icon-calendar"></i> Published: </span>
-        <span class="info-date">02 Aug 2013</span>
+        <span class="info-date">19 Feb 2014</span>
         <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
         <span class="info-link"><a href="http://hankewins.com/categories.html#-ref" ></a></span>
     </div>
-    <p>今天同事用ST2打开.scss项目文件时，出现自动生成并打开一个.dump文件，而且文件中的代码不再高度显示，分析如下：  </p>
+    <p>之前使用wordpress时，一直都是用的SyntaxHIghlighter代码高亮的工具，虽然SyntaxHIghlighter的代码高亮显示的很漂亮，无奈加载太慢，且对markdown写的文章支持的还不是很好，只能舍弃了。现在用的这个是google-code-prettfy，效果也相当不错。最重要的是，非常小，加载速度比SyntaxHighlighter快得多，而且，可以直接使用markdown的语法去写代码。</p>
+
+<h3>准备工作</h3>
 
 <ul>
-<li><p>1..dump是什么文件？（系统内存中存储的临时文件）。  </p></li>
-<li><p>2.打开.scss文件时生成.dump文件，这是为什么？（.scss需要编译成.css文件，同时存在编码问题）。  </p></li>
-<li><p>3.什么影响打开.scss文件时才会生成.dump文件？（ST2安装的插件、插件文件损毁）。  </p></li>
+<li><a href="https://code.google.com/p/google-code-prettify/">Google Code Prettify下载</a></li>
+<li><a href="http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html">主题库</a></li>
 </ul>
 
-<p>通过以上分析，我们开始Remove Package中可能引起问题的插件例如SublimeOnSaveBuild、PyV8,重启ST2发现问题依然存在，后面通过搜索相关资料发现有类似问题的答案，重新查看了ST2中安装的插件发现安装了GBK Encoding Support，移除该插件后，重新打开.scss文件，代码正常高度显示。</p>
+<h3>第一步：引用prettify.css和prettify.js</h3>
 
-<p>疑问：GBK Encoding Support一直都在使用，为什么之前没有出现这样的问题呢？    </p>
+<p>将下载后的Prettify压缩文件解压到指定文件文件夹,将prettify.css和prettify.js文件放到项目文件夹下（例如：assets/theme/prettify目录）,然后打开需要引用的页面，添加如下代码：</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;link href=&quot;/assets/themes/prettify/prettify.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/themes/prettify/prettify.js&quot;&gt;&lt;/script&gt;
+</code></pre></div>
+<p>考虑到加载速度，最好将js写到文档末尾，body闭合标签之前，css写到头部</p>
 
-<ul>
-<li><p>1.GBK Encoding Support 插件对GBK存在不稳定。  </p></li>
-<li><p>2.通过SVN版本管理，某一方没有安装GBK Encoding Support插件，而已一方安装了GBK Encoding Support插件。  </p></li>
-</ul>
+<h3>第二步：高亮代码块</h3>
 
-<p>感谢 [凌毅] 提供修改版的 GBK Encoding Support，支持语法高亮。  </p>
+<p>添加以下代码，用于识别并高亮代码块</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;script type=&quot;text/javascript&quot;&gt;
+    // 需要引入jQuery
+    $(document).ready(function() {
+        $(&#39;pre&#39;).addClass(&#39;prettyprint linenums&#39;).attr(&#39;style&#39;, &#39;overflow:auto&#39;);
+        prettyPrint();
+    });
+&lt;/script&gt;
+</code></pre></div>
+<h3>第三步：显示全部行号</h3>
 
-<p>下载地址：<a href="http://pan.baidu.com/share/link?shareid=174741&amp;uk=2534294120">http://pan.baidu.com/share/link?shareid=174741&amp;uk=2534294120</a>  </p>
+<p>默认prettify只显示行号5,10,15...,可以给<code>pre</code>标签下的li设置以下样式</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">pre li{ list-style-type: decimal; }
+</code></pre></div>
+<h3>第四步：选择喜欢的主题样式</h3>
 
-<p>使用方法：下载 GBK Encoding Support.sublime-package 文件 替换 SublimeText2\Pristine Packages  下的GBK Encoding Support.sublime-package 文件，重启ST2就可以了。</p>
+<p>打开<a href="http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html">主题库</a>选择喜欢的主题，并复制或者下载主题样式文件，替换默认主题样式文件（prettify.css）,本文使用的主题是Desert</p>
+
+<h3>第五步：完成</h3>
+
+<p>到此Google Code Prettify已可以正常使用了，现在可以直接用markdown的前置4空格来写代码了。</p>
+
+<p>另外，如果博客中的代码块存在滚动条可以通过如下代码实现自动换行</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">white-space:pre;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;
+</code></pre></div>
+<p>如在操作过程中存在任何问题，请给我留言，谢谢！</p>
 
     <nav class="article-previous fn-clear">
         
-        <a class="prev" href="/2013/07/17/javascript-question-collection.html" rel="bookmark">&laquo;&nbsp;前端系列--Javascript“小题大做”（持续更新...）</a>
+        <a class="prev" href="/2014/02/18/how-to-development-a-navtive-app-for-html5.html" rel="bookmark">&laquo;&nbsp;解决HTML5移动开发中边框显示2px</a>
         
-        
-        <a class="next" href="/2013/08/10/ubuntu-install-sublime-text-2.html" rel="bookmark">Ubuntu 12.04下Sublime Text 2的详细安装与破解过程&nbsp;&raquo;</a>
         
     </nav>
     <div class="comment">

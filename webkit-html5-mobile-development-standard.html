@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ST2打开.scss文件时自动生成并打开.dump文件的BUG - Hankewins Blog</title>
+    <title>移动web开发规范 - Hankewins Blog</title>
     <!-- meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Jekyll" />
@@ -108,53 +108,53 @@
     <div class="contain fn-clear">
         <div class="container fn-clear">
             <div class="main">
-                <div class="article article-post">
-    <h2 class="title">ST2打开.scss文件时自动生成并打开.dump文件的BUG</h2>
-    <div class="info">
-        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
-        <span class="info-date">02 Aug 2013</span>
-        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
-        <span class="info-link"><a href="http://hankewins.com/categories.html#-ref" ></a></span>
-    </div>
-    <p>今天同事用ST2打开.scss项目文件时，出现自动生成并打开一个.dump文件，而且文件中的代码不再高度显示，分析如下：  </p>
+                <h1>移动开发规范概述</h1>
 
-<ul>
-<li><p>1..dump是什么文件？（系统内存中存储的临时文件）。  </p></li>
-<li><p>2.打开.scss文件时生成.dump文件，这是为什么？（.scss需要编译成.css文件，同时存在编码问题）。  </p></li>
-<li><p>3.什么影响打开.scss文件时才会生成.dump文件？（ST2安装的插件、插件文件损毁）。  </p></li>
-</ul>
+<p>以下规范建议，均是根据Hankewins在日常开发过程中总结提炼出的经验，规范具备较好的项目实践，强烈推荐使用</p>
 
-<p>通过以上分析，我们开始Remove Package中可能引起问题的插件例如SublimeOnSaveBuild、PyV8,重启ST2发现问题依然存在，后面通过搜索相关资料发现有类似问题的答案，重新查看了ST2中安装的插件发现安装了GBK Encoding Support，移除该插件后，重新打开.scss文件，代码正常高度显示。</p>
+<h2>基础交互</h2>
 
-<p>疑问：GBK Encoding Support一直都在使用，为什么之前没有出现这样的问题呢？    </p>
+<p><strong>1.设置全局的CSS样式，避免图中的长按弹出菜单与选中文本的行为</strong></p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">a, img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
+</code></pre></div>
+<p><strong>2.禁止触发系统默认菜单</strong></p>
 
-<ul>
-<li><p>1.GBK Encoding Support 插件对GBK存在不稳定。  </p></li>
-<li><p>2.通过SVN版本管理，某一方没有安装GBK Encoding Support插件，而已一方安装了GBK Encoding Support插件。  </p></li>
-</ul>
+<p><strong>操作：</strong>在手机webkit浏览器中，用户在某一些按钮上长按3秒钟后，会弹出一个系统的列表，ios和android各自展现不一样，列表可以有复制或在在新窗口打开的等操作，这种体验对于按钮来说是不需要的，按钮上是绑定事件，有特殊功能，而这里系统把它当做一个链接的意义。查看了代码，原来是一个a标签，链接地址为空。(Hybrid Apps)</p>
 
-<p>感谢 [凌毅] 提供修改版的 GBK Encoding Support，支持语法高亮。  </p>
+<p>例如：</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;查看余额&lt;/a&gt;
+</code></pre></div>
+<p>找了资料后，ios平台有个解决办法</p>
 
-<p>下载地址：<a href="http://pan.baidu.com/share/link?shareid=174741&amp;uk=2534294120">http://pan.baidu.com/share/link?shareid=174741&amp;uk=2534294120</a>  </p>
+<p>可以通过控制当前元素的-webkit-touch-callout的样式属性为none;属性来禁止触发系统的菜单</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">a{-webkit-touch-callout:none}
+</code></pre></div>
+<p>这里补充-webkit-touch-callout:none 的功能，测试结果如下：</p>
 
-<p>使用方法：下载 GBK Encoding Support.sublime-package 文件 替换 SublimeText2\Pristine Packages  下的GBK Encoding Support.sublime-package 文件，重启ST2就可以了。</p>
+<p>1.ios 长按时不触发系统菜单</p>
 
-    <nav class="article-previous fn-clear">
-        
-        <a class="prev" href="/2013/07/17/javascript-question-collection.html" rel="bookmark">&laquo;&nbsp;前端系列--Javascript“小题大做”（持续更新...）</a>
-        
-        
-        <a class="next" href="/2013/08/10/ubuntu-install-sublime-text-2.html" rel="bookmark">Ubuntu 12.04下Sublime Text 2的详细安装与破解过程&nbsp;&raquo;</a>
-        
-    </nav>
-    <div class="comment">
-        
-            
-            <div class="ds-thread"></div>
-            
-        
-    </div>
-</div>
+<p>2.ios 和 android 长按时不触发下载图片菜单</p>
+
+<p>对于ios，我们可以使用-webkit-touch-callout:none，那么如何如何禁止 android 系统默认菜单呢？</p>
+
+<p>实践中，发现在android2.x系统中设置a标签的href属性为 javascript:void(0) ，即链接属性为空，可以禁止系统默认菜单</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;a href=&quot;javascript:void(0);&quot; class=&quot;btn&quot;&gt;查看余额&lt;/a&gt;
+</code></pre></div>
+<p>而对于部分android4.x系统，这种做法又失效了，android机器真是各种疯啊...</p>
+
+<p>要使用a标签目前还是找不到最优的解决办法，如果把a标签用 button 或者 input button 来替换的确可以解决该问题，但是没有a标签被点击时产生的半透明灰色背景效果，用户体验一般</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;button class=&quot;btn&quot;&gt;查看余额&lt;/button&gt;
+</code></pre></div>
+<p>或者</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;input type=&quot;button&quot; class=&quot;btn&quot; value=&quot;查看余额&quot;/&gt;
+</code></pre></div>
+<p>一点经验谈，希望给遇到过的童鞋带来帮助，如果大家有更好的意见，欢迎留言讨论~</p>
 
             </div>
             <div class="aside">

@@ -17,6 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://hankewins.com/css/syntax.css">
     <link rel="stylesheet" href="http://hankewins.com/css/main.css">
+    <link rel="stylesheet" href="http://hankewins.com/assets/prettify/prettify.css">
     
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -195,6 +196,8 @@ alert(sayHi()+10);
                     <h4 class="title">Recent Posts</h4>
                     <ul class="list">
                         
+                            <li><a href="http://hankewins.com/2014/02/19/jekyll-use-google-code-prettify.html" title="Jekyll中使用google-code-prettify语法高亮" rel="bookmark">Jekyll中使用google-code-prettify语法高亮</a></li>
+                        
                             <li><a href="http://hankewins.com/2014/02/18/how-to-development-a-navtive-app-for-html5.html" title="解决HTML5移动开发中边框显示2px" rel="bookmark">解决HTML5移动开发中边框显示2px</a></li>
                         
                             <li><a href="http://hankewins.com/2014/01/26/gionee-group-annual-party.html" title="2014年新金立新征程" rel="bookmark">2014年新金立新征程</a></li>
@@ -204,8 +207,6 @@ alert(sayHi()+10);
                             <li><a href="http://hankewins.com/2014/01/22/wordpress-blog-to-github-pages.html" title="从 wordpress 搬迁到 github pages" rel="bookmark">从 wordpress 搬迁到 github pages</a></li>
                         
                             <li><a href="http://hankewins.com/2014/01/18/third-product-center-annual-party.html" title="金立移动互联网第三产品中心年度盛会" rel="bookmark">金立移动互联网第三产品中心年度盛会</a></li>
-                        
-                            <li><a href="http://hankewins.com/2013/12/28/2013-year.html" title="2013年终总结" rel="bookmark">2013年终总结</a></li>
                         
                     </ul>
                 </div>
@@ -241,24 +242,31 @@ alert(sayHi()+10);
             <p>© 2013 - <script>document.write((new Date).getFullYear());</script> Hankewins. Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and host by <a href="http://github.com/hankewins">github</a>, Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin.info</a>.</p>
         </div>
     </div>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://hankewins.com/assets/prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+        prettyPrint();
+    });
+</script>
+
     
         
-            
-            <script type="text/javascript">
-                var duoshuoQuery = {short_name:"hankewins"};
-                (function() {
-                    var ds = document.createElement('script');
-                    ds.type = 'text/javascript';ds.async = true;
-                    ds.src = 'http://static.duoshuo.com/embed.js';
-                    ds.charset = 'UTF-8';
-                    (document.getElementsByTagName('head')[0]
-                    || document.getElementsByTagName('body')[0]).appendChild(ds);
-                })();
-            </script>
-            
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:"hankewins"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = 'http://static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
         
     
+
 <!-- 百度统计 -->
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
