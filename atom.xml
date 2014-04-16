@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
    <title>Hankewins Blog</title>
-   <link href="http://hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
-   <link href="http://hankewins.com" rel="alternate" type="text/html" />
-   <updated>2014-02-19T20:58:38+08:00</updated>
-   <id>http://hankewins.com</id>
+   <link href="//hankewins.com/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="//hankewins.com" rel="alternate" type="text/html" />
+   <updated>2014-04-17T00:45:34+08:00</updated>
+   <id>//hankewins.com</id>
    <author>
      <name>Hankewins</name>
      <email>hankewins@gmail.com</email>
@@ -14,9 +14,9 @@
    
    <entry>
      <title>Jekyll中使用google-code-prettify语法高亮</title>
-     <link href="http://hankewins.com/2014/02/19/jekyll-use-google-code-prettify.html"/>
+     <link href="//hankewins.com/2014/02/19/jekyll-use-google-code-prettify.html"/>
      <updated>2014-02-19T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2014/02/19/jekyll-use-google-code-prettify</id>
+     <id>//hankewins.com/2014/02/19/jekyll-use-google-code-prettify</id>
      <content type="html">&lt;p&gt;之前使用wordpress时，一直都是用的SyntaxHIghlighter代码高亮的工具，虽然SyntaxHIghlighter的代码高亮显示的很漂亮，无奈加载太慢，且对markdown写的文章支持的还不是很好，只能舍弃了。现在用的这个是google-code-prettfy，效果也相当不错。最重要的是，非常小，加载速度比SyntaxHighlighter快得多，而且，可以直接使用markdown的语法去写代码。&lt;/p&gt;
 
 &lt;h3&gt;准备工作&lt;/h3&gt;
@@ -67,9 +67,9 @@
    
    <entry>
      <title>解决HTML5移动开发中边框显示2px</title>
-     <link href="http://hankewins.com/2014/02/18/how-to-development-a-navtive-app-for-html5.html"/>
+     <link href="//hankewins.com/2014/02/18/how-to-development-a-navtive-app-for-html5.html"/>
      <updated>2014-02-18T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2014/02/18/how-to-development-a-navtive-app-for-html5</id>
+     <id>//hankewins.com/2014/02/18/how-to-development-a-navtive-app-for-html5</id>
      <content type="html">&lt;p&gt;让我们一起来回顾一下，HTML5移动开发过程中遇到的一些问题，总结起来也就以下几个方面：&lt;/p&gt;
 
 &lt;ul&gt;
@@ -134,9 +134,9 @@
    
    <entry>
      <title>2014年新金立新征程</title>
-     <link href="http://hankewins.com/2014/01/26/gionee-group-annual-party.html"/>
+     <link href="//hankewins.com/2014/01/26/gionee-group-annual-party.html"/>
      <updated>2014-01-26T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2014/01/26/gionee-group-annual-party</id>
+     <id>//hankewins.com/2014/01/26/gionee-group-annual-party</id>
      <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.elife.com/thread-44841-1-1.html&quot;&gt;&lt;img src=&quot;/pic/20140126001.jpg&quot; alt=&quot;新金立、新征程&quot;&gt;&lt;/a&gt;
 2014年金立集团新年联欢晚会，金立人齐聚一起。新金立、新征程！&lt;/p&gt;
 
@@ -168,9 +168,9 @@
    
    <entry>
      <title>代码发布流程的一些探讨</title>
-     <link href="http://hankewins.com/2014/01/24/how-to-release-your-code-to-online.html"/>
+     <link href="//hankewins.com/2014/01/24/how-to-release-your-code-to-online.html"/>
      <updated>2014-01-24T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2014/01/24/how-to-release-your-code-to-online</id>
+     <id>//hankewins.com/2014/01/24/how-to-release-your-code-to-online</id>
      <content type="html">&lt;p&gt;今天组织了一次&lt;a href=&quot;http://hankewins.com/reveal.html&quot;&gt;代码发布流程研讨会&lt;/a&gt;，指在讨论现有代码发布流程的一些优缺点，通过收集同学们已知的代码发布流程，进行总结并优化现有的代码发布流程。&lt;/p&gt;
 
 &lt;h2&gt;目前我们代码发布流程是怎么样的？&lt;/h2&gt;
@@ -233,9 +233,9 @@
    
    <entry>
      <title>从 wordpress 搬迁到 github pages</title>
-     <link href="http://hankewins.com/2014/01/22/wordpress-blog-to-github-pages.html"/>
+     <link href="//hankewins.com/2014/01/22/wordpress-blog-to-github-pages.html"/>
      <updated>2014-01-22T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2014/01/22/wordpress-blog-to-github-pages</id>
+     <id>//hankewins.com/2014/01/22/wordpress-blog-to-github-pages</id>
      <content type="html">&lt;p&gt;一直在寻求快速发表文章的工具，于是不停的在尝试。期间尝试过win7和Ubuntu下各种Ｍarkdown编辑预览工具，
 甚至使用开发工具ST2(Sublime text 2)装Ｍarkdown插件来更新博客，各种尝试，各种折腾。也许是因为之前对动态站点的理解，
 导致思想上一直认为 —— WordPress 或者 emlog 等是最好的博客系统没有之一的原故。&lt;/p&gt;
@@ -275,9 +275,9 @@
    
    <entry>
      <title>金立移动互联网第三产品中心年度盛会</title>
-     <link href="http://hankewins.com/2014/01/18/third-product-center-annual-party.html"/>
+     <link href="//hankewins.com/2014/01/18/third-product-center-annual-party.html"/>
      <updated>2014-01-18T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2014/01/18/third-product-center-annual-party</id>
+     <id>//hankewins.com/2014/01/18/third-product-center-annual-party</id>
      <content type="html">&lt;p&gt;从移动互联网运营部到移动互联网第三产品中心的转变，标志着我们目前各产品线的良性成长。从个位数迅速发展到百位数、从第一个迭代版本到第几十个的迭代版本、从单一结构发展到
 多元化结构、从年会时３桌的人数迅速发展到上10桌的人数、奖项从单一到多元化和人性化的分布。2013年是成长的一年，也是快乐的一年，因为和你们在一起。&lt;/p&gt;
 
@@ -339,9 +339,9 @@
    
    <entry>
      <title>2013年终总结</title>
-     <link href="http://hankewins.com/2013/12/28/2013-year.html"/>
+     <link href="//hankewins.com/2013/12/28/2013-year.html"/>
      <updated>2013-12-28T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/12/28/2013-year</id>
+     <id>//hankewins.com/2013/12/28/2013-year</id>
      <content type="html">&lt;p&gt;2013年就要过去了，像往年一样总结一下过去的一年我的变化。&lt;/p&gt;
 
 &lt;h1&gt;生活&lt;/h1&gt;
@@ -382,9 +382,9 @@
    
    <entry>
      <title>移动开发总结（转）</title>
-     <link href="http://hankewins.com/2013/11/20/html5-and-css3-for-mobile-development.html"/>
+     <link href="//hankewins.com/2013/11/20/html5-and-css3-for-mobile-development.html"/>
      <updated>2013-11-20T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/11/20/html5-and-css3-for-mobile-development</id>
+     <id>//hankewins.com/2013/11/20/html5-and-css3-for-mobile-development</id>
      <content type="html">&lt;p&gt;1、低版本Android下input有CSS3动画会让输入框失去焦点，解决办法是低版本Android下去掉所有CSS3动画。
 .ua-ios .ipt{-webkit-transition:all .5s;-moz-transition:all .5s;-o-transition:all .5s;-ms-transition:all .5s;transition:all .5s}
 .ua-oldAndroid .ipt {-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;}&lt;/p&gt;
@@ -422,9 +422,9 @@
    
    <entry>
      <title>阿里前端的困局与突围(转)</title>
-     <link href="http://hankewins.com/2013/10/23/is-time-to-think-about-frontend-future.html"/>
+     <link href="//hankewins.com/2013/10/23/is-time-to-think-about-frontend-future.html"/>
      <updated>2013-10-23T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/10/23/is-time-to-think-about-frontend-future</id>
+     <id>//hankewins.com/2013/10/23/is-time-to-think-about-frontend-future</id>
      <content type="html">&lt;p&gt;最近发了两条微博：
 想起克军的一句话：前端研究，研究个屁~ 的确如此呀。补充下联：前端设计，设计个屁~
 前端目前最大的困境是，如 HTML 一样，无论你承不承认，市场上并不太需要 HTML 高手。
@@ -538,9 +538,9 @@
    
    <entry>
      <title>蜕变·WebRebuild 2013 前端年度交流盛会邀请</title>
-     <link href="http://hankewins.com/2013/10/17/web-rebuild-party.html"/>
+     <link href="//hankewins.com/2013/10/17/web-rebuild-party.html"/>
      <updated>2013-10-17T00:00:00+08:00</updated>
-     <id>http://hankewins.com/2013/10/17/web-rebuild-party</id>
+     <id>//hankewins.com/2013/10/17/web-rebuild-party</id>
      <content type="html">&lt;p&gt;&lt;img src=&quot;http://blog.hankewins.com/wp-content/uploads/2013/10/1572764368.jpg&quot; alt=&quot;蜕变·WebRebuild 2013 前端年度交流会深圳站邀请&quot; width=&quot;730&quot; height=&quot;300&quot; class=&quot;aligncenter size-full wp-image-261&quot; /&gt;
 互联网web前端设计行业通过一段时期的茧封或焰炼，web技术使行业、企业及自身发生质的改变。痛苦的蜕变是成长的契机，在彼此互相冲击、交流、融合的对话下，将以尊重包容互助合作同步发展的心态，对行业蜕变、自我提升的过程分享自己的观点进行探讨。&lt;/p&gt;
 
