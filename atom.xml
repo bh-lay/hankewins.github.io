@@ -4,13 +4,21 @@
    <title>Hankewins Blog</title>
    <link href="http://hankewins.com//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://hankewins.com/" rel="alternate" type="text/html" />
-   <updated>2014-06-07T16:04:34+08:00</updated>
+   <updated>2014-07-16T09:52:14+08:00</updated>
    <id>http://hankewins.com/</id>
    <author>
      <name>Hankewins</name>
      <email>hankewins@gmail.com</email>
    </author>
 
+   
+   <entry>
+     <title>不舍、起航、前进</title>
+     <link href="http://hankewins.com//2014/05/30/we-are-move-to-new-place.html"/>
+     <updated>2014-05-30T00:00:00+08:00</updated>
+     <id>http://hankewins.com//2014/05/30/we-are-move-to-new-place</id>
+     <content type="html"></content>
+   </entry>
    
    <entry>
      <title>Jekyll中使用google-code-prettify语法高亮</title>
@@ -533,41 +541,6 @@
 &lt;p&gt;PS：把这篇文章发出来，很犹豫。把这些想清楚的事情说出来，虽然可能会影响团队士气，会打击工作不久的前端，但隐瞒更不可取。 前端还很年轻，如何发展，如何前行，需要所有前端们一起来思考。我们需要未来，也需要真实。我们不需要的是混日子。我们往哪里去，取决于我们自己。&lt;/p&gt;
 
 &lt;p&gt;原文地址：&lt;a href=&quot;http://www.chengxuyuans.com/program_life/67632.html&quot;&gt;http://www.chengxuyuans.com/program_life/67632.html&lt;/a&gt;&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>蜕变·WebRebuild 2013 前端年度交流盛会邀请</title>
-     <link href="http://hankewins.com//2013/10/17/web-rebuild-party.html"/>
-     <updated>2013-10-17T00:00:00+08:00</updated>
-     <id>http://hankewins.com//2013/10/17/web-rebuild-party</id>
-     <content type="html">&lt;p&gt;&lt;img src=&quot;http://blog.hankewins.com/wp-content/uploads/2013/10/1572764368.jpg&quot; alt=&quot;蜕变·WebRebuild 2013 前端年度交流会深圳站邀请&quot; width=&quot;730&quot; height=&quot;300&quot; class=&quot;aligncenter size-full wp-image-261&quot; /&gt;
-互联网web前端设计行业通过一段时期的茧封或焰炼，web技术使行业、企业及自身发生质的改变。痛苦的蜕变是成长的契机，在彼此互相冲击、交流、融合的对话下，将以尊重包容互助合作同步发展的心态，对行业蜕变、自我提升的过程分享自己的观点进行探讨。&lt;/p&gt;
-
-&lt;p&gt;2013，本届主题为“蜕变”的前端技术年度交流会已是第七届，依然如往年在深圳、广州、上海、北京、成都五地举行，&lt;a href=&quot;http://ecd.tencent.com/&quot;&gt;腾讯ecd&lt;/a&gt;联合WebRebuild.ORG、&lt;a href=&quot;http://ici.szu.edu.cn/&quot;&gt;深圳大学文化产业研究院&lt;/a&gt;、&lt;a href=&quot;http://cued.xunlei.com/&quot;&gt;迅雷CUED&lt;/a&gt;主办了第七届前端年度交流会“蜕变”首站 － 深圳站，将于10月26日上午9点在深圳大学拉开帷幕。&lt;/p&gt;
-
-&lt;p&gt;交流会形式
-web前端设计主题分享、现场来宾主题交流对话探讨。&lt;/p&gt;
-
-&lt;p&gt;会议进行时间
-2013年10月26日（周六）上午 9:00&lt;/p&gt;
-
-&lt;p&gt;会议地点
-深圳市南山区深圳大学科技楼一号报告厅。&lt;/p&gt;
-
-&lt;p&gt;邀请参会对象
-互联网web前端/设计从业者及相关专业、兴趣的学生。&lt;/p&gt;
-
-&lt;p&gt;报名渠道
-&lt;a href=&quot;http://webrebuild.org/2013/sz/signup.html&quot; title=&quot;WebRebuild.ORG官方网站&quot;&gt;WebRebuild.ORG官方网站&lt;/a&gt;，或添加微信公众帐号(webrebuildorg)进行相关操作。&lt;/p&gt;
-
-&lt;p&gt;交流会背景&lt;/p&gt;
-
-&lt;p&gt;WebRebuild.ORG 成立于2007年，由互联网前端业界人员自发起的一个交流会组织，从深圳扩散至全国，旨在推动互联网前端web标准技术在中国的发展，致力于为同行从业者提供一个分享交流的平台，提升从业者的影响力及技术能力储备，并向发展成为推动中国互联网前端web标准技术的非盈利性组织的目标而努力。&lt;/p&gt;
-
-&lt;p&gt;从2007年至今，WebRebuild.ORG得到了W3C中国、Google中国、腾讯、迅雷、网易、欢聚时代、百家筝鸣古筝教育集团等企业组织、同行及会议组委志愿者的大力支持与帮助，已成为中国前端盛大的行业盛会之一。&lt;/p&gt;
-
-&lt;p&gt;广州、上海、北京、成都地区更多详细信息及参会报名请访问WebRebuild官方网站查阅：&lt;a href=&quot;http://www.webrebuild.org&quot;&gt;http://www.webrebuild.org&lt;/a&gt;或收听WebRebuild微信公众帐号（webrebuildorg）获取最新信息。&lt;/p&gt;
 </content>
    </entry>
    
