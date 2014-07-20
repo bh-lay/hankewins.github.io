@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>移动web开发规范 - Hankewins Blog</title>
+    <title>《卓越经理人的七个习惯》培训有感 - Hankewins Blog</title>
     <!-- meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Jekyll" />
@@ -99,53 +99,105 @@
     <div class="contain fn-clear">
         <div class="container fn-clear">
             <div class="main">
-                <h1>移动开发规范概述</h1>
+                <div class="article article-post">
+    <h2 class="title">《卓越经理人的七个习惯》培训有感</h2>
+    <div class="info">
+        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+        <span class="info-date">20 Jul 2014</span>
+        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
+        <span class="info-link"><a href="http://hankewins.com//categories.html#-ref" ></a></span>
+    </div>
+    <p>最近公司组织了一次《卓越经理人的七个习惯》的培训，旨在提升管理层的管理水平，我很荣幸参与了这次课程的培训，
+本次课程让我收获了很多，学习了很多，下面就谈谈这次培训的一些感悟吧！</p>
 
-<p>以下规范建议，均是根据Hankewins在日常开发过程中总结提炼出的经验，规范具备较好的项目实践，强烈推荐使用</p>
+<p>这次课程的内容主要是基于<a href="http://baike.baidu.com/view/1229532.htm">史蒂芬·柯维（Stephen R. Covey）</a>的<a href="http://baike.baidu.com/view/580966.htm?fr=aladdin">《高效能人士的七个习惯》</a>并结合讲师独特的讲解手法，
+通过案例、场景、现在模拟等方式，透彻的分析如何做好个人管理、建议人际关系、自我的持续提升。</p>
 
-<h2>基础交互</h2>
+<p>卓越经理人的七个习惯的自然法则和观念转移分别：</p>
 
-<p><strong>1.设置全局的CSS样式，避免图中的长按弹出菜单与选中文本的行为</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">a, img {
-    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
-}
-html, body {
-    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
-    user-select: none;
-}
-</code></pre></div>
-<p><strong>2.禁止触发系统默认菜单</strong></p>
+<h3>自然法则</h3>
 
-<p><strong>操作：</strong>在手机webkit浏览器中，用户在某一些按钮上长按3秒钟后，会弹出一个系统的列表，ios和android各自展现不一样，列表可以有复制或在在新窗口打开的等操作，这种体验对于按钮来说是不需要的，按钮上是绑定事件，有特殊功能，而这里系统把它当做一个链接的意义。查看了代码，原来是一个a标签，链接地址为空。(Hybrid Apps)</p>
+<p>人的反应不是受环境的制约，人有能力也有责任通过自主意识选择自己的反应。</p>
 
-<p>例如：</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;查看余额&lt;/a&gt;
-</code></pre></div>
-<p>找了资料后，ios平台有个解决办法</p>
+<h3>观念转移</h3>
 
-<p>可以通过控制当前元素的-webkit-touch-callout的样式属性为none;属性来禁止触发系统的菜单</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">a{-webkit-touch-callout:none}
-</code></pre></div>
-<p>这里补充-webkit-touch-callout:none 的功能，测试结果如下：</p>
+<p>我们不要去总是去抱怨环境的不利、条件的限制和他人的缺失”，而应该考虑“在现有条件下我能做什么”。</p>
 
-<p>1.ios 长按时不触发系统菜单</p>
+<h3>自然法则</h3>
 
-<p>2.ios 和 android 长按时不触发下载图片菜单</p>
+<p>任何事物的创造需要经历两个过程，先想出来，再做出来。</p>
 
-<p>对于ios，我们可以使用-webkit-touch-callout:none，那么如何如何禁止 android 系统默认菜单呢？</p>
+<h3>观念转移</h3>
 
-<p>实践中，发现在android2.x系统中设置a标签的href属性为 javascript:void(0) ，即链接属性为空，可以禁止系统默认菜单</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;a href=&quot;javascript:void(0);&quot; class=&quot;btn&quot;&gt;查看余额&lt;/a&gt;
-</code></pre></div>
-<p>而对于部分android4.x系统，这种做法又失效了，android机器真是各种疯啊...</p>
+<p>工作不能想做什么就做什么，做到哪里算哪里。
+工作的第一步如何开展，过程中如何选择，都要根据最终的目标来进行。</p>
 
-<p>要使用a标签目前还是找不到最优的解决办法，如果把a标签用 button 或者 input button 来替换的确可以解决该问题，但是没有a标签被点击时产生的半透明灰色背景效果，用户体验一般</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;button class=&quot;btn&quot;&gt;查看余额&lt;/button&gt;
-</code></pre></div>
-<p>或者</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;input type=&quot;button&quot; class=&quot;btn&quot; value=&quot;查看余额&quot;/&gt;
-</code></pre></div>
-<p>一点经验谈，希望给遇到过的童鞋带来帮助，如果大家有更好的意见，欢迎留言讨论~</p>
+<h3>自然法则</h3>
+
+<p>重要的少数往往决定结果的多数。</p>
+
+<h3>观念转移</h3>
+
+<p>我们在做事件时要以重要为依据而非紧急性。这样才能事半功倍。</p>
+
+<h3>自然法则</h3>
+
+<p>唯有双方都能获利，这样的关系才会长久。</p>
+
+<h3>观念转移</h3>
+
+<p>从我赢你输的小圈子里跳出来，用利人利已作为出发点来考虑人际问题。</p>
+
+<h3>自然法则</h3>
+
+<p>先诊断，再开药方。</p>
+
+<h3>观念转移</h3>
+
+<p>先理解别人再表达自己，为理解而去倾听，而不是为了反应而倾听。</p>
+
+<h3>自然法则</h3>
+
+<p>整体可以大于个体的总和。</p>
+
+<h3>观念转移</h3>
+
+<p>珍惜差异，善于从不同意见中吸取好的主意。</p>
+
+<h3>自然法则</h3>
+
+<p>产出和产能要平衡。</p>
+
+<h3>观念转移</h3>
+
+<p>我们需要自我更新，从而使自己走更远的路。磨刀不误砍柴功。</p>
+
+<p>通过这次培训，让我更深层次的了解“原则”的定义，并在如何应对生活层面、工作层面等复杂的环境方面得到提升，
+同时学习到了思维模式的转变、四象限法则的运用、人际交往的整合等等。</p>
+
+<p>管理是一门艺术，需要主动积极、用心体会、用行动去描绘。</p>
+
+<p>最后给大家推荐两本书：</p>
+
+<ul>
+<li><a href="http://baike.baidu.com/view/2372837.htm">《浪潮之巅》</a> -- 吴军</li>
+<li><a href="http://baike.baidu.com/view/2274790.htm">《小强升职记》</a> -- 邹鑫</li>
+</ul>
+
+    <nav class="article-previous fn-clear">
+        
+        <a class="prev" href="/2014/05/30/we-are-move-to-new-place.html" rel="bookmark">&laquo;&nbsp;新环境新动力</a>
+        
+        
+    </nav>
+    <div class="comment">
+        
+            
+            <div class="ds-thread"></div>
+            
+        
+    </div>
+</div>
 
             </div>
             <div class="aside">
