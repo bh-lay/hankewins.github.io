@@ -18,15 +18,15 @@ I'm now living in Shenzhen, china.
 
 These are some of my social links:
 
-github
+[github](https://github.com/hankewins)
 
-facebook
+[facebook](https://www.facebook.com/hankewins)
 
-weibo
+[weibo](http://http://weibo.com/hankewins)
 
-email
+[email](me#hankewins.com)
 
-profile
+[profile](http://hankewins.com/profile)
 
 My QQ ID is 726927378, to add me as a friend, mark your reason please. Without a reason, I'll refuse your request.
 
