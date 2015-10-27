@@ -1,5 +1,6 @@
 baseurl:
-url: "http://hankewins.com/"
+#url: "http://hankewins.com/"
+url: "/"
 name: Hankewins's Blog
 author: Hankewins
 email: hakewins@gmail.com
