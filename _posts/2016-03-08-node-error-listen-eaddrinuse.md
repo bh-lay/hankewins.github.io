@@ -12,7 +12,6 @@ categories: [Node开发]
     events.js:141
           throw er; // Unhandled 'error' event
           ^
-
     Error: listen EADDRINUSE :::3000
         at Object.exports._errnoException (util.js:870:11)
         at exports._exceptionWithHostPort (util.js:893:20)
