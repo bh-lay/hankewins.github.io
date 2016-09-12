@@ -3,7 +3,7 @@ layout: post
 title: Javascript实现两个超大数字的相加
 date: 2015-08-25
 comments: true
-categories: [Javascript]
+categories: [javascript]
 ---
 
 两个超大数字相加的实现
