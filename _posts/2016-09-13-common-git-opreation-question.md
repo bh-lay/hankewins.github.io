@@ -6,8 +6,6 @@ comments: false
 categories: [版本管理]
 ---
 
-## git常用操作命令
-
 一、远程操作
 
 - 从远程主机克隆一个版本库

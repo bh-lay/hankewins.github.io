@@ -1,9 +1,6 @@
 ---
 layout: page
-title: About Me | Hankewins Blog
----
-
-关于我
+title: 关于我
 ---
 
 2010年毕业后开始加入深漂一族，12年加入[金立](http://www.gionee.com/)至今，现任Amigo中心-浏览器项目组前端Leader，高级前端工程师。
