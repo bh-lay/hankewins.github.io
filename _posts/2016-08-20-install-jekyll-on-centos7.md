@@ -8,6 +8,26 @@ categories: [服务器]
 
 这两天购买了[linode](https://www.linode.com/)的vps,通过各种设置后成功安装了```CentOS7```操作系统，现尝试在```CentOS7```下安装并使用```Jekyll```，记录步骤和安装过程中产生的问题和解决方法。
 
+### 查看系统版本
+
+方式一：
+
+```
+$ rpm -q rpm -q centos-release // centos-release-7-2.1511.el7.centos.2.10.x86_64
+```
+
+方式二：
+
+```
+$ cat /etc/redhat-release // CentOS Linux release 7.2.1511 (Core)
+```
+
+或
+
+```
+$ cat /etc/centos-release // CentOS Linux release 7.2.1511 (Core)
+```
+
 ### 安装Ruby
 
 ```
