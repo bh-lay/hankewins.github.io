@@ -3,7 +3,7 @@ layout: page
 title: 关于我
 ---
 
-2010年毕业后开始加入深漂一族，12年加入[金立](http://www.gionee.com/)至今，现任Amigo中心-浏览器项目组前端Leader，高级前端工程师。
+2010年毕业后开始加入深漂一族，前端开发工程师，现工作于[用友](http://www.yonyou.com/)。
 
 对世界充满好奇，喜欢折腾！常年混迹于[UED](http://www.daqianduan.com/nav)、[Startup News](http://news.dbanotes.net/)、[Hacker News](https://news.ycombinator.com/news)、[博客园](http://www.cnblogs.com/)、[Github](https://github.com/)等。
 

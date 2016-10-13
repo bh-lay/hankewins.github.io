@@ -1,13 +1,26 @@
 ---
 layout: default
 ---
-<div class="yearly-archive archive-page">{% for post in site.posts %}
-	{% unless post.next %}<h2>{{ post.date | date: '%Y' }}</h2>
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-      {% if year != nyear %}<h2>{{ post.date | date: '%Y' }}</h2>
-      {% endif %}
-    {% endunless %}<p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class='category-tag'>[{{ post.categories }}]</span><span class='date'>{{post.date | date: "%m月 %d日"}}</span></p>
-	{% endfor %}
+
+<div class="site-profile-wrap">
+    <div class="post-profile">
+        <img class="avatar" src="{{ '/assets/img/avatar.jpg' | prepend: site.baseurl }}" />
+        <div class="info">
+            <h4>易翰</h4>
+            <p>专注于前端开发工作，热衷于新技术的研究，致力于成为一名合格的全栈工程师，现工作于用友·深圳。</p>
+        </div>
+    </div>
+</div>
+
+<div class="post-short-list">
+    <div class="post-title">最新文章<a href="/blog/">（查看全部文章）</a></div>
+    <ul>
+        {% for post in site.posts limit:10 %}
+    	<li>
+            <span class='category-tag'>[{{ post.categories }}]</span>
+        	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+        	<time class='date' date="{{ post.date | date: '%Y-%m-%d' }}">{{post.date | date: "%B %Y"}}</time>
+        </li>
+    	{% endfor %}
+    </ul>
  </div>

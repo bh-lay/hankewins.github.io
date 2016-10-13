@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="all" />
-    <title>{{ page.title }}</title>
-    <link rel="shortcut icon" href="/fa.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <!--[if (lt IE 9) & (!IEMobile)]>
-    <link rel="stylesheet" type="text/css" href="/css/ie.css" />
-    <![endif]-->
-</head>
-{% include ga.html %}
-<body>
+---
+layout: default
+---
+<article class="site-post-wrap">
 
-<div class="single-post">
-    <span class="post-meta"><a href="{{ site.url}}">{{ site.author }}</a></span>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
 
+  <div class="post-content">
     {{ content }}
-    {% include duoshuo.html %}
-</div>
+  </div>
 
-{% include footer.html %}
-
-</body>
-</html>
+</article>

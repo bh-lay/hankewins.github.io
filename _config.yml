@@ -1,5 +1,5 @@
 # Site settings
-title: Hankewins\\'s Blog
+title: Hankewins's Blog
 description: > # this means to ignore newlines until "baseurl:"
   专注于前端开发工作，热衷于新技术的研究，致力于成为一名合格的全栈工程师，现工作于用友·深圳。
 baseurl: "" # the subpath of your site, e.g. /blog

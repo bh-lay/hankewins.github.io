@@ -2,13 +2,22 @@
 layout: default
 title: 个人博客
 ---
-<div class="yearly-archive archive-page">{% for post in site.posts %}
-    {% unless post.next %}<h2>{{ post.date | date: '%Y' }}</h2>
+
+<div class="post-short-list">{% for post in site.posts %}
+	{% unless post.next %}<div class="post-title">{{ post.date | date: '%Y' }}</div>
     {% else %}
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-    {% if year != nyear %}<h2>{{ post.date | date: '%Y' }}</h2>
+    {% if year != nyear %}<div class="post-title">{{ post.date | date: '%Y' }}</div>
     {% endif %}
-    {% endunless %}<p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class='category-tag'>[{{ post.categories }}]</span><span class='date'>{{post.date | date: "%m月 %d日"}}</span></p>
+    {% endunless %}
+    
+    <ul>
+    	<li>
+            <span class='category-tag'>[{{ post.categories }}]</span>
+        	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+        	<time class='date' date="{{ post.date | date: '%Y-%m-%d' }}">{{post.date | date: "%B %Y"}}</time>
+        </li>
+    </ul>
     {% endfor %}
-</div>
+ </div>
