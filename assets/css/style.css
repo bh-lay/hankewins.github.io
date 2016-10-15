@@ -498,27 +498,22 @@ cite {
     width: 30%;
 }
 
-// @media all and (max-width:639px) {
-//     div.primary header h1 {
-//         display: none;
-//     }
-//     div.ads {
-//         display: none;
-//     }
-//     div.primary nav li {
-//         float: left;
-//         border-right: 1px solid #666;
-//         margin-right: 10px;
-//         padding-right: 10px;
-//     }
-//     div.primary nav li:last-child {
-//         border-right: 0 none;
-//     }
-//     div.site-main-wrap {
-//         width: 90%;
-//         margin: 20px auto;
-//     }
-// }
+@media all and (max-width:639px) {
+    .site-header-wrap,
+    .site-footer-wrap,
+    .site-main-wrap {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .post-short-list li .category-tag{
+        display: none;
+    }
+
+    .post-short-list li a{
+        padding: 0 100px 0 10px;
+    }
+}
 
 // @media all and (min-width:640px) {
 //     div.site-main-wrap {
