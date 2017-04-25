@@ -405,6 +405,7 @@ cite {
 
 .site-post-wrap ul,
 .site-post-wrap ol {
+    padding: 0;
     margin: 0.25em 0;
 }
 
