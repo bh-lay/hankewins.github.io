@@ -6,13 +6,14 @@ comments: true
 categories: [其他]
 ---
 
+
 亚马逊应该是目前实际上云服务商中最最知名的，早就听闻了它的云服务器业务，和阿里云的差不多，就是可以自己搭建自己的云服务器。
 
 亚马逊的AWS提供了拥有免费一年的套餐，当时也是为了体验一下AWS，所以就注册并开通了AWS中的EC2，从体验过程中感觉AWS操作相对复杂，不是很适合个体用户，最终还是选择了linode。
 
 今天主要是分享一下亚马逊云服务器取消操作以及在此过程中的一些体会。
 
-### 故事背景
+### 背景
 
 无意中发现本人信用卡消费记录中有一条Amazon web services扣款$12.19的记录，通过排查发现一年前开通的AWS服务已到期，正常思维是没有使用，不应该产生费用。
 
@@ -24,8 +25,8 @@ categories: [其他]
 
 ### 关闭服务
 
-- 打开页面: https://console.aws.amazon.com/billing/home#/account (这个页面最下面有提供关闭服务，不会再被收取任何费用，大家不要马上点击最下面的关闭服务，否则还是会被持续扣钱的，必须先取消服务) 
-- 点击“Cancel Services,” 下面的“Click Here”
-- 点击“Change Plan”
-- 选择“Basic Support” 然后点击“Change Plan”
+打开页面: https://console.aws.amazon.com/billing/home#/account (这个页面最下面有提供关闭服务，不会再被收取任何费用，正常情况下直接关闭服务即可) 
+
+注：如果开通的不是基础服务则需要先取消相关服务，点击“Cancel Services,” 下面的“Click Here”，点击“Change Plan”，选择“Basic Support” 然后点击“Change Plan”，保存后关闭服务即可
+
 
