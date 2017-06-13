@@ -427,31 +427,19 @@ cite {
 }
 
 .site-post-wrap pre {
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
     overflow: auto;
-    padding: 6px 10px;
     border-radius: 3px;
     white-space: pre-wrap;
 }
 
 .site-post-wrap code {
     margin: 0 2px;
-    padding: 0px 5px;
-    border: 1px solid #EAEAEA;
-    background-color: #F8F8F8;
+    padding: 10px;
     border-radius: 3px;
     white-space: pre-wrap;
     font-family: monospace;
 }
 
-.site-post-wrap pre code {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    white-space: pre-wrap;
-}
 
 .site-post-wrap .previous-next-nav {
     overflow: hidden;

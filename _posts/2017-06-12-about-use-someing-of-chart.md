@@ -23,12 +23,12 @@ categories: [前端开发]
 
 1、 如何设置线条大小、颜色？
 
-```
+```javascript
 data: {
 	labels: labels,
 	datasets: [{
-    	label:'',
-    	data,
+		label:'',
+		data,
 		borderWidth: 2, // 线条宽度
 		borderColor:'rgba(255,255,255,.6)', // 线条颜色
 		backgroundColor:'rgba(255,255,255,.2)', // 线条到坐标区域背景色
@@ -40,7 +40,7 @@ data: {
 
 在Chart配置参数options中设置legend的dispay的值为false
 
-```
+```javascript
 options: {
 	legend: {
 		display: false // 隐藏线条的说明（Tag）
@@ -52,7 +52,7 @@ options: {
 
 在Chart配置参数options中对坐标进行相关设置
 
-```
+```javascript
 options: {
 	scales: {
     	xAxes: [{
@@ -79,7 +79,7 @@ options: {
 
 4、 如何隐藏y坐标的对应值？
 
-```
+```javascript
 options: {
 	responsive: false,
 	legend: {display: false},
@@ -98,7 +98,7 @@ options: {
 
 默认不设置坐标轴最小值则坐标轴动态显示，可为正数、负数或对等的正负坐标轴，当设置最小值后则按最小值显示对应坐标轴
 
-```
+```javascript
 options: {
 	responsive: false,
 	legend: {display: false},
@@ -114,7 +114,7 @@ options: {
 
 以下为完整的实例代码：
 
-```
+```javascript
 Chart.defaults.global.defaultFontColor = '#fff';
 	var myChart = new Chart(ctx, {
 		type: 'line',
