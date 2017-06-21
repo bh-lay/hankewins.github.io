@@ -12,7 +12,7 @@ title: 关于我
 通过以下更多方式了解我：
 
 - [简历](http://hankewins.com/profile)
-- [微博](http://http://weibo.com/hankewins)
+- [微博](http://weibo.com/hankewins)
 - [Github](https://github.com/hankewins)
 - [Twitter](https://twitter.com/hankewins)
 - [Facebook](https://www.facebook.com/hankewins)
